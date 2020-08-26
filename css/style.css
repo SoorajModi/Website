@@ -17,3 +17,7 @@ a:hover {
 a:link, a:visited, a:active {
   color: white;
 }
+
+.left, .right {
+  padding: 0;
+}
