@@ -1,12 +1,14 @@
-body {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
-  background-color: #64646d;
-}
-
 .footer {
   text-align: center;
-  background-color: #64646d;
+  color:black;
+  padding-bottom:20px;
+  background-color:red;
+}
+
+body {
+  padding-top:3.5rem;
+  padding-bottom:3.5rem;
+  background-color:#64646d;
 }
 
 a:hover {
@@ -20,4 +22,8 @@ a:link, a:visited, a:active {
 
 .left, .right {
   padding: 0;
+}
+
+.h6{
+  color: grey;
 }
