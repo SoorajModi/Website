@@ -1,22 +1,67 @@
+body {
+  background-color: ;
+}
+
+.container {
+  padding-top:3.5rem;
+  padding-bottom:3.5rem;
+}
+
+.gap {
+  padding-top:3.5rem;
+  padding-bottom:5rem;
+  background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 250px; /* Height of the gap */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.gap2 {
+  padding-top:3.5rem;
+  padding-bottom:5rem;
+  background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100px; /* Height of the gap */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 .footer {
   text-align: center;
   color:black;
   padding-bottom:20px;
-  background-color:red;
-}
-
-body {
-  padding-top:3.5rem;
-  padding-bottom:3.5rem;
+  padding-top:20px;
   background-color:#64646d;
 }
 
+.skills {
+  text-align:center;
+  padding-bottom:20px;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+/* MUST come after a:link and a:visited */
 a:hover {
   color: white;
   font-weight: bolder;
 }
 
-a:link, a:visited, a:active {
+/* selected link */
+/* MUST come after a:hover */
+a:active {
   color: white;
 }
 
@@ -24,6 +69,6 @@ a:link, a:visited, a:active {
   padding: 0;
 }
 
-.h6{
+.h6 {
   color: grey;
 }
