@@ -34,9 +34,23 @@
   background-color:#64646d;
 }
 
+.image {
+  vertical-align:center;
+  background-blend-mode:multiply;
+  max-height:250px;
+}
+
 .skills {
   text-align:center;
   padding-bottom:20px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height:1000px;
+    width:100%;
+    overflow: scroll;
 }
 
 /* unvisited link */
