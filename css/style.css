@@ -53,6 +53,21 @@
     overflow: scroll;
 }
 
+.about_header {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.about_sub_header{
+  text-align: left;
+  padding-bottom: 10px;
+  color: grey;
+}
+
+.about_sub_text {
+  text-align: left;
+}
+
 /* unvisited link */
 a:link {
   color: white;
