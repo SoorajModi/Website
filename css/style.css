@@ -80,7 +80,6 @@
 .about_sub_header{
   text-align: left;
   padding-bottom: 10px;
-  color: grey;
 }
 
 .about_sub_text {
@@ -93,6 +92,10 @@
 
 .rotate {
   transform:rotate(180deg);
+}
+
+.rotate90 {
+  transform:rotate(-90deg);
 }
 
 /* unvisited link */
