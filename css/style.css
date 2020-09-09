@@ -3,6 +3,24 @@
   padding-bottom:3.5rem;
 }
 
+.item_padding {
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+}
+
+.drop_down_padding {
+  padding-left: 2.0rem;
+}
+
+.pad_bottom {
+  padding-bottom:1.0rem;
+}
+
+.divider {
+  padding-top:0rem;
+  padding-bottom:0rem;
+}
+
 .gap {
   padding-top:3.5rem;
   padding-bottom:5rem;
@@ -12,6 +30,7 @@
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
 }
 
 .edu_gap {
@@ -68,6 +87,14 @@
   text-align: left;
 }
 
+.animate-icon {
+  transition: 0.4s;
+}
+
+.rotate {
+  transform:rotate(180deg);
+}
+
 /* unvisited link */
 a:link {
   color: white;
@@ -96,4 +123,17 @@ a:active {
 
 .h6 {
   color: #C0C0C0;
+}
+
+button.btn {
+  color:black;
+}
+
+button.btn:active {
+  outline: none;
+  border: none;
+}
+
+button.btn:focus {
+  outline:0;
 }
