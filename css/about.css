@@ -1,7 +1,8 @@
 /* General Elements */
 .about_header {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 5%;
+  padding-bottom: 1%;
 }
 
 .about_sub_header{

@@ -1,8 +1,33 @@
 .edu_gap {
-  height:300px;
   background-image: url("file:///Users/soorajmodi/Code/my_website/images/blackboard.jpg"); /* The image used */
+}
+
+.edu_header {
+  text-align: center;
+}
+
+.edu_header {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .about_arrow {
   outline: none;
+}
+
+.container {
+  background-color: #F8F8F8;
+}
+
+.extra_info_card .card  {
+  background-color:#F0F0F0;
+  padding-top:1.0rem;
+}
+
+.expand_btn {
+  padding-bottom: 0px;
+  text-align: center;
+  outline: none;
+  padding-left: 50%;
+  padding-right: 50%;
 }

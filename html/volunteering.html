@@ -10,10 +10,14 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/education.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -59,74 +63,133 @@
     <!-- Nav Bar End -->
 
     <!-- Add gap for visual space -->
-    <div class="gap">
+    <div class="gap major_gap">
+    </div>
+
+    <div class="cat_header">
+      <h1>Volunteering</h1>
+      <!-- <h4>My educations and skills</h4> -->
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    </div>
+
+    <div class="gap minor_gap">
+    </div>
+
+    <!-- Add dividier to seperate different positions -->
+    <div class="container divider">
+      <hr>
     </div>
 
     <!-- Main portion of webpage -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="https://www.uoguelph.ca/" target="_blank">
-            <img src="../images/uog.png" class="img-fluid" alt="University of Guelph Logo">
-          </a>
+      <div class="sub_cat_card">
+        <div class="row">
+          <div class="container divider text-center">
+            <h2>University of Guelph Senate</h2>
+            <h6>Student Senator &#9679; Guelph, ON &#9679; September 2017 - Present</h6>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <button class="expand_btn btn collapsed" data-toggle="collapse" data-target="#collapseSenate" aria-expanded="false" aria-controls="collapseSenate">
+              <div class="center">
+                <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
+              </div>
+            </button>
+          </div>
         </div>
-        <div class="col-md-9 col-sm-6 text-center">
-          <h2>University of Guelph Senate</h2>
-          <h6>Student Senator &#9679; Guelph, ON &#9679; September 2017 - Present</h6>
-          <p style="text-align:left;">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9 col-sm-6 text-center">
-          <h2>Society of Computing and Information Science (SOCIS)</h2>
-          <h6> President &#9679; Guelph, ON &#9679; May 2019 - April 2020</h6>
-          <p style="text-align:left;">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="https://socis.ca/" target="_blank">
-            <img src="../images/socis.png" class="img-fluid" alt="Society of Computing and Information Science Logo">
-          </a>
+        <div class="collapse extra_info_card" id="collapseSenate">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
         </div>
       </div>
     </div>
 
-    <hr>
+    <!-- Add dividier to seperate different positions -->
+    <div class="container divider">
+      <hr>
+    </div>
 
+    <!-- SOCIS  -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="https://socis.ca/gcc/" target="_blank">
-            <img src="../images/gcc.svg" class="img-fluid" alt="Guelph Coding Community Logo">
-          </a>
+      <div class="sub_cat_card">
+        <div class="row">
+          <div class="container divider text-center">
+            <h2>Society of Computing and Information Science (SOCIS)</h2>
+            <h6>President &#9679; Guelph, ON &#9679; May 2019 - April 2020</h6>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <button class="expand_btn btn collapsed" data-toggle="collapse" data-target="#collapseSOCIS" aria-expanded="false" aria-controls="collapseSOCIS">
+              <div class="center">
+                <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
+              </div>
+            </button>
+          </div>
         </div>
-        <div class="col-md-9 col-sm-6 text-center">
-          <h2>Guelph Coding Community (GCC)</h2>
-          <h6>Executive Member &#9679; Guelph, ON &#9679; May 2020 - Present </h6>
-          <p style="text-align:left;">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <div class="collapse extra_info_card" id="collapseSOCIS">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
         </div>
       </div>
     </div>
 
-    <hr>
+    <!-- Add dividier to seperate different positions -->
+    <div class="container divider">
+      <hr>
+    </div>
 
+    <!-- GCC -->
     <div class="container">
-      <div class="row">
-        <div class="col-md-9 col-sm-6 text-center">
-          <h2>Jack.org</h2>
-          <h6>Executive Member&#9679; Guelph, ON &#9679; January 2019 - April 2020 </h6>
-          <p style="text-align:left;">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <div class="sub_cat_card">
+        <div class="row">
+          <div class="container divider text-center">
+            <h2>Guelph Coding Community (GCC)</h2>
+            <h6>Director of Events &#9679; Guelph, ON &#9679; May 2020 - Present</h6>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <button class="expand_btn btn collapsed" data-toggle="collapse" data-target="#collapseGCC" aria-expanded="false" aria-controls="collapseGCC">
+              <div class="center">
+                <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
+              </div>
+            </button>
+          </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="https://jack.org/Home" target="_blank">
-            <img src="../images/jack.png" class="img-fluid" alt="Jack Dot Org Logo">
-          </a>
+        <div class="collapse extra_info_card" id="collapseGCC">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Add dividier to seperate different positions -->
+    <div class="container divider">
+      <hr>
+    </div>
+
+    <!-- Jack.org -->
+    <div class="container">
+      <div class="sub_cat_card">
+        <div class="row">
+          <div class="container divider text-center">
+            <h2>Jack.org</h2>
+            <h6>Executive Member&#9679; Guelph, ON &#9679; January 2019 - April 2020</h6>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <button class="expand_btn btn collapsed" data-toggle="collapse" data-target="#collapseJack" aria-expanded="false" aria-controls="collapseJack">
+              <div class="center">
+                <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="collapse extra_info_card" id="collapseJack">
+          <div class="card card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add dividier to seperate different positions -->
+    <div class="container divider">
+      <hr>
     </div>
 
     <!-- Footer for final info -->
@@ -136,5 +199,7 @@
       <p style="color:white">Thank you for visiting!</p>
     </div>
 
+    <script src="../index.js" charset="utf-8"></script>
+    <script src="../js/education.js" charset="utf-8"></script>
   </body>
 </html>
