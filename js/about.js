@@ -1,19 +1,9 @@
-document.getElementById('about_drop').addEventListener('click', function() {
-  var icon = this.querySelector('.right i.fa');
-  icon.classList.toggle('rotate90');
-});
+// Rotate Arrow icons upon click
+var num_collapse = document.getElementsByClassName("about_sub_header");
 
-document.getElementById('about_drop2').addEventListener('click', function() {
-  var icon = this.querySelector('.right i.fa');
-  icon.classList.toggle('rotate90');
-});
-
-document.getElementById('about_drop3').addEventListener('click', function() {
-  var icon = this.querySelector('.right i.fa');
-  icon.classList.toggle('rotate90');
-});
-
-document.getElementById('about_drop4').addEventListener('click', function() {
-  var icon = this.querySelector('.right i.fa');
-  icon.classList.toggle('rotate90');
-});
+for (var i = 0; i < num_collapse.length; i++) {
+  num_collapse[i].addEventListener("click", function() {
+    var icon = this.querySelector('h4 .about_arrow .right i.fa');
+    icon.classList.toggle('rotateNeg90');
+  });
+}

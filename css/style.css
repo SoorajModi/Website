@@ -24,25 +24,17 @@
 .gap {
   padding-top:3.5rem;
   padding-bottom:5rem;
-  background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* The image used */
+  background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* Default image used */
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 250px; /* Height of the gap */
+  height: 500px; /* Height of the gap */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   background-attachment: fixed;
 }
 
-.edu_gap {
-  padding-top:3.5rem;
-  padding-bottom:5rem;
-  background-image: url("file:///Users/soorajmodi/Code/my_website/images/blackboard.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 250px; /* Height of the gap */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-
+.minor_gap {
+  height: 150px;
 }
 
 .footer {
@@ -72,30 +64,12 @@
     overflow: scroll;
 }
 
-.about_header {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.about_sub_header{
-  text-align: left;
-  padding-bottom: 10px;
-}
-
-.about_sub_text {
-  text-align: left;
-}
-
 .animate-icon {
   transition: 0.4s;
 }
 
 .rotate {
   transform:rotate(180deg);
-}
-
-.rotate90 {
-  transform:rotate(-90deg);
 }
 
 /* unvisited link */
@@ -128,6 +102,15 @@ a:active {
   color: #C0C0C0;
 }
 
+button {
+  font-family: Lato-Thin;
+  outline:none;
+}
+
+h1 {
+  font-family: Lato;
+}
+
 button.btn {
   color:black;
 }
@@ -137,6 +120,6 @@ button.btn:active {
   border: none;
 }
 
-button.btn:focus {
-  outline:0;
+p {
+  font-family: Lato;
 }

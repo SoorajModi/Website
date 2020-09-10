@@ -1,0 +1,31 @@
+/* General Elements */
+.about_header {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.about_sub_header{
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.about_sub_text {
+  text-align: left;
+}
+
+.about_arrow a {
+  color:black;
+  outline:none;
+  padding-right: 1%;
+}
+
+/* No changes to button */
+.about_sub_header .heading {
+  color:black;
+  text-decoration:none;
+}
+
+/* Functionality for Arrow Icons*/
+.rotateNeg90 {
+  transform:rotate(-90deg);
+}
