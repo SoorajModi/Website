@@ -1,4 +1,4 @@
-/* Individual Elements */
+/* Custom CSS for homepage*/
 .home_header {
   background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* The image used */
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -17,4 +17,9 @@
 
 .about_padding {
   padding-top: 2.5%;
+}
+
+.skills {
+  text-align:center;
+  padding-bottom:20px;
 }

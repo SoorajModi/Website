@@ -1,19 +1,7 @@
+/* CSS shared across webpages */
 .container {
   padding-top:3.5rem;
   padding-bottom:3.5rem;
-}
-
-.item_padding {
-  padding-top:1.5rem;
-  padding-bottom:1.5rem;
-}
-
-.drop_down_padding {
-  padding-left: 2.0rem;
-}
-
-.pad_bottom {
-  padding-bottom:1.0rem;
 }
 
 .divider {
@@ -21,6 +9,7 @@
   padding-bottom:0rem;
 }
 
+/* CSS for gaps on webpage */
 .gap {
   padding-top:3.5rem;
   padding-bottom:5rem;
@@ -42,6 +31,25 @@
   height: 700px;
 }
 
+/* Navbar and Footer Styling */
+.navbar .nav-item a {
+  display: inline-block;
+  text-align:center;
+}
+
+.navbar .nav-item a:hover {
+    text-shadow: 0 0 1px white;
+}
+
+.footer {
+  text-align: center;
+  color:black;
+  padding-bottom:20px;
+  padding-top:20px;
+  background-color:#64646d;
+}
+
+/* Custom styling for categories on site */
 .cat_header h1 {
   text-align: center;
   font-size: 60px;
@@ -57,23 +65,10 @@
   padding-bottom: 2%;
 }
 
-.footer {
-  text-align: center;
-  color:black;
-  padding-bottom:20px;
-  padding-top:20px;
-  background-color:#64646d;
-}
-
 .image {
   vertical-align:center;
   background-blend-mode:multiply;
   max-height:250px;
-}
-
-.skills {
-  text-align:center;
-  padding-bottom:20px;
 }
 
 .embed-responsive {
