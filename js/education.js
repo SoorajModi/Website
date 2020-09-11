@@ -1,4 +1,4 @@
-// Change icon for more/reduce
+// Rotate arrow upon click
 var num_expand = document.getElementsByClassName("expand_btn")
 
 for (var i = 0; i < num_expand.length; i++) {
