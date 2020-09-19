@@ -1,0 +1,49 @@
+.about_arrow {
+  outline: none;
+}
+
+.container {
+  background-color: #F8F8F8;
+  padding-bottom: 0.5%;
+  padding-top: 0px;
+  border-radius: 15px;
+}
+
+.divider {
+  border-radius: 0;
+  padding-bottom: 0;
+}
+
+.container a {
+  padding-bottom: 10%;
+  padding-top: 0px;
+}
+
+.container h2 {
+  padding-top:2.5%;
+}
+
+.container p {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.container .extra_info_card {
+  padding-bottom: 1%;
+}
+
+.extra_info_card .card  {
+  background-color:#F0F0F0;
+  padding-top:0;
+  border-radius: 10px;
+}
+
+.expand_btn {
+  padding-top: -5px;
+  padding-bottom:5%;
+  text-align: center;
+  outline: none;
+  padding-left: 50%;
+  padding-right: 50%;
+  color:black;
+}

@@ -1,0 +1,25 @@
+/* Custom CSS for homepage*/
+.home_header {
+  background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* Height of the gap */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed; /* Keep background image in fixed position */
+}
+
+.home_btn {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: lighter;
+}
+
+.about_padding {
+  padding-top: 2.5%;
+}
+
+.skills {
+  text-align:center;
+  padding-bottom:20px;
+}
