@@ -1,0 +1,27 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "Sooraj Modi Website",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoorajModi/my_website.git"
+  },
+  "author": "Sooraj Modi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoorajModi/my_website/issues"
+  },
+  "homepage": "https://github.com/SoorajModi/my_website#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

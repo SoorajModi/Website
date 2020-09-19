@@ -6,3 +6,13 @@ I am an aspiring software developer. I built this website for potential employer
 to view my accomplishments and showcase some of my web development skills.
 
 This website is built 100% by hand, and you can view it on soorajmodi.com.
+
+## How to Run
+
+Install node modules: `npm install`
+
+Run server: `node server.js`
+
+or
+
+open `index.html` in a browser
