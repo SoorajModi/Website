@@ -3,7 +3,6 @@
 }
 
 .container {
-  background-color: #F8F8F8;
   padding-bottom: 0.5%;
   padding-top: 0px;
   border-radius: 15px;
@@ -33,8 +32,9 @@
 }
 
 .extra_info_card .card  {
-  background-color:#F0F0F0;
-  padding-top:0;
+  background-color:#F8F8F8;
+  padding-top:auto;
+  padding-bottom:auto;
   border-radius: 10px;
 }
 
