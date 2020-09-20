@@ -1,3 +1,24 @@
+h4 {
+  font-size: 18px;
+  padding-bottom: 1.5rem;
+  font-weight: 250;
+  color: #505050;
+}
+
+h5 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 250;
+}
+
+h6 {
+  padding-top: 0px;
+  padding-bottom: 1rem;
+  font-weight:250;
+  font-size: 16px;
+  color: #505050;
+}
+
 .container img {
     max-width:75%;
     max-height: 1000px;
@@ -27,13 +48,11 @@
 }
 
 .contact_info {
-  padding-top: 2%;
-  font-size: 15px;
   vertical-align: top;
 }
 
-.contact_button {
+.contact_icons {
   padding-top: 5%;
-  display: inline-block;
-  padding-left: 5%;
+  display: flex;
+  justify-content: space-evenly;
 }
