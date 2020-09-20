@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("static"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -13,7 +13,7 @@ app.get("/", function(req, res){
 });
 
 app.post("/experience", function(req, res){
-  res.sendFile(path.join(__dirname, "/html/work_experience.html"));
+  res.sendFile(path.join(__dirname, "/static/html/work_experience.html"));
 });
 
 app.listen(8008, function(){
