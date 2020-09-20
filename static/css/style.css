@@ -1,4 +1,27 @@
 /* CSS shared across webpages */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar .nav-item a {
+  display: inline-block;
+  text-align:center;
+}
+
+.navbar .nav-item a:hover {
+    text-shadow: 0 0 1px white;
+}
+
+.navbar-nav > li {
+  margin-left:10px;
+  margin-right:5px;
+}
+
+.navbar_logo {
+  max-height:30px;
+}
+
 .container {
   padding-top:3.5rem;
   padding-bottom:3.5rem;
@@ -13,7 +36,7 @@
 .gap {
   padding-top:3.5rem;
   padding-bottom:5rem;
-  /* background-image: url("file:///Users/soorajmodi/Code/my_website/images/gap_main.jpeg"); /* Default image used */ */
+  background-image: url("../images/gap_main.jpeg"); /* Default image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 500px; /* Height of the gap */
   width: 100%;
@@ -25,32 +48,11 @@
 
 .minor_gap {
   height: 150px;
+  background-image: url('../images/gap_main.jpeg');
 }
 
 .major_gap {
   height: 700px;
-}
-
-/* Navbar and Footer Styling */
-.navbar .nav-item a {
-  display: inline-block;
-  text-align:center;
-}
-
-.navbar .nav-item a:hover {
-    text-shadow: 0 0 1px white;
-}
-
-.navbar_logo {
-  max-height:30px;
-}
-
-.footer {
-  text-align: center;
-  color:black;
-  padding-bottom:20px;
-  padding-top:20px;
-  background-color:#64646d;
 }
 
 /* Custom styling for categories on site */
@@ -83,6 +85,7 @@
     overflow: scroll;
 }
 
+/* CSS for rotating arrow */
 .animate-icon {
   transition: 0.4s;
 }
@@ -92,7 +95,15 @@
 }
 
 /* CSS for Footer Links */
-.footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active{
+.footer {
+  text-align: center;
+  color: #ffffff;
+  padding-bottom:20px;
+  padding-top:20px;
+  background-color:#64646d;
+}
+
+.footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active, .footer p {
   color: #ffffff;
   text-decoration: none;
 }
@@ -103,31 +114,4 @@
 
 .left, .right {
   padding: 0;
-}
-
-.h6 {
-  font-family: Lato;
-  color: #C0C0C0;
-}
-
-button {
-  font-family: Lato-Thin;
-  outline:none;
-}
-
-h1 {
-  font-family: Lato;
-}
-
-button.btn {
-  color:black;
-}
-
-button.btn:active {
-  outline: none;
-  border: none;
-}
-
-p {
-  font-family: Lato;
 }
