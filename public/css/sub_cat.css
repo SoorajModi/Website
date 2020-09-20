@@ -38,6 +38,11 @@
   border-radius: 10px;
 }
 
+.cat_link:link, .cat_link:visited, .cat_link:hover, .cat_link:active {
+  color: #000000;
+  text-decoration: none;
+}
+
 .expand_btn {
   padding-top: -5px;
   padding-bottom:5%;

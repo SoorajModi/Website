@@ -91,26 +91,14 @@
   transform:rotate(180deg);
 }
 
-/* unvisited link */
-a:link {
-  color: white;
+/* CSS for Footer Links */
+.footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active{
+  color: #ffffff;
+  text-decoration: none;
 }
 
-/* visited link */
-a:visited {
-  color: white;
-}
-
-/* mouse over link */
-/* MUST come after a:link and a:visited */
-a:hover {
-  color: white;
-}
-
-/* selected link */
-/* MUST come after a:hover */
-a:active {
-  color: white;
+.footer_link:hover {
+  text-shadow: 0 0 1px #ffffff;
 }
 
 .left, .right {
