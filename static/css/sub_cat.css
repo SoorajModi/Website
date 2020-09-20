@@ -60,3 +60,7 @@
   padding-right: 50%;
   color:black;
 }
+
+.expand_btn:hover {
+  color: black;
+}
