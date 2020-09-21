@@ -62,22 +62,6 @@ body {
   height: 700px;
 }
 
-/* Custom styling for categories on site */
-.cat_header h1 {
-  text-align: center;
-  font-size: 60px;
-  font-weight: light;
-  padding-top: 4%;
-  padding-bottom: 2%;
-}
-
-.cat_header p {
-  text-align: center;
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-bottom: 2%;
-}
-
 .image {
   vertical-align:center;
   background-blend-mode:multiply;
@@ -111,12 +95,15 @@ body {
 }
 
 .footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active, .footer p {
+  font-size: 18px;
   color: #ffffff;
   text-decoration: none;
+  font-weight: 400;
 }
 
 .footer_link:hover {
   text-shadow: 0 0 1px #ffffff;
+  font-weight: 500;
 }
 
 .left, .right {

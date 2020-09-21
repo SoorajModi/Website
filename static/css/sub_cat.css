@@ -46,6 +46,14 @@
   border-radius: 10px;
 }
 
+.cat_header h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: light;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
 .cat_link:link, .cat_link:visited, .cat_link:hover, .cat_link:active {
   color: #000000;
   text-decoration: none;
