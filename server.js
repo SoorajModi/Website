@@ -35,11 +35,6 @@ app.get("/resume", function(req, res) {
   res.render("resume");
 });
 
-
-// app.get("/about", function(req, res) {
-//   res.sendFile(path.join(__dirname, "/static/about.html"))
-// });
-
 // 404 Errors
 app.use(function (req, res, next) {
   res.render("404");
