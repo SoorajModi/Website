@@ -1,19 +1,42 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const path = require('path');
+const bodyParser = require("body-parser")
+const ejs = require("ejs");
+// const _ = require("lodash");
 
 const app = express();
+
+app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname, "/index.html"));
+app.get("/", function(req, res) {
+  res.render("home");
 });
 
-app.post("/experience", function(req, res){
-  res.sendFile(path.join(__dirname, "/html/work_experience.html"));
+app.get("/about", function(req, res) {
+  res.redirect("/");
+});
+
+app.get("/experience", function(req, res) {
+  res.render("experience");
+});
+
+app.get("/education", function(req, res) {
+  res.render("education");
+});
+
+app.get("/volunteering", function(req, res) {
+  res.render("volunteering");
+});
+
+app.get("/resume", function(req, res) {
+  res.render("resume");
+});
+
+app.get("/contact", function(req, res) {
+  res.render("contact");
 });
 
 app.listen(8008, function(){

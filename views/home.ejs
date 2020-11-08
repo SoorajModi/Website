@@ -1,0 +1,81 @@
+<%- include('partials/header'); -%>
+<body>
+  <%- include('partials/navbar'); -%>
+
+  <!-- Main content of website -->
+  <main role="main">
+
+    <!-- Add gap for visual space -->
+    <div class="home_header" style="background-image: url('/images/gap_main.jpeg');">
+    </div>
+
+    <!-- Main portion of website -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <img src="/images/profile.jpg" class="img-fluid" alt="Sooraj Modi Profile Picture" style="border-radius:8px;">
+        </div>
+        <div class="col-md-9 col-sm-6 about_padding">
+          <p>Hello! My name is Sooraj Modi, and I am a passionate software developer currently completing my Bachelor's degree in Honours Computer Science with a History minor at the University of Guelph. My time in University has allowed my
+            to grow as a person and develop essential real world skills I hope to apply to future employment opportunities. I am a proven leader with creative problem solving skills. I am always looking for opportunities to improve and grow as
+            a person, profession, leader and teamate. This website showcases some of my mmost influential experiences that help me grow into the person I am today. Feel free to reach out to me for questions or inquiries.</p>
+          <!-- <div class="col text-center">
+            <p><a class="btn btn-secondary home_btn" href="/about" role="button">More About Me</a></p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Add smaller gap for visual space -->
+    <div class="gap minor_gap" style="background-image: url('/images/gap_main.jpeg');">
+    </div>
+
+    <div class="container">
+      <!-- Description of subcategories -->
+      <div class="row">
+        <div class="col-md-4 col-sm-1 text-center">
+          <h2>Experience</h2>
+          <p>Take a look at some of my work experience ranging from a Software Developer to an Undergradute Research Assistant. These experiences have allowed me to apply skills I've learned to real applications and grow professionally.</p>
+          <p><a class="btn btn-secondary home_btn" href="/experience" role="button">Read More</a></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h2>Education</h2>
+          <p>This section showcases some of the education opportunities I have participated including degrees, certifications and self-learning. Education is a fundamental step in anyones life, and my experiences has challenged and allowed me to grow into a better individual.</p>
+          <p><a class="btn btn-secondary home_btn" href="/education" role="button">Read More</a></p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h2>Volunteering</h2>
+          <p>Its very important for me to be an engaged and active member of the community I'm associated with. Throughout my time at University I have volunteered for various positions and clubs that have given me tremendous experiential learning opportunities.</p>
+          <p><a class="btn btn-secondary home_btn" href="/volunteering" role="button">Read More</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+    <!-- List of Key Skills -->
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="row">
+        <div class="col-sm-6 left">
+          <ul class="list-unstyled">
+            <li>C</li>
+            <li>Python / Jupyter Notebooks</li>
+            <li>Java / Spring</li>
+            <li>Fortran / Ada / Cobol</li>
+            <li>Elixir / Pheonix</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 right">
+          <ul class="list-unstyled">
+            <li>Git / Version Control</li>
+            <li>HTML / CSS / Bootstrap</li>
+            <li>Maven / Gradle</li>
+            <li>SQL</li>
+            <li>Bash / CLI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<%- include('partials/footer'); -%>
