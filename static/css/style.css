@@ -1,0 +1,111 @@
+/* CSS shared across webpages */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navbar Styling */
+.nav-link {
+  display: inline-block;
+  text-align:center;
+  color:white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 400;
+  transition: 0.2s;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    text-shadow: 0 0 1.5px white;
+    text-decoration: none;
+}
+
+.navbar-nav > li {
+  margin-left:10px;
+  margin-right:5px;
+}
+
+.navbar_logo {
+  max-height:30px;
+}
+
+.container {
+  padding-top:3.5rem;
+  padding-bottom:3.5rem;
+}
+
+.divider {
+  padding-top:0rem;
+  padding-bottom:0rem;
+}
+
+/* CSS for gaps on webpage */
+.gap {
+  padding-top:3.5rem;
+  padding-bottom:5rem;
+  background-image: url("../images/gap_main.jpeg"); /* Default image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px; /* Height of the gap */
+  width: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+}
+
+.minor_gap {
+  height: 150px;
+  background-image: url('../images/gap_main.jpeg');
+}
+
+.major_gap {
+  height: 700px;
+}
+
+.image {
+  vertical-align:center;
+  background-blend-mode:multiply;
+  max-height:250px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height:1000px;
+    width:100%;
+    overflow: scroll;
+}
+
+/* CSS for rotating arrow */
+.animate-icon {
+  transition: 0.4s;
+}
+
+.rotate {
+  transform:rotate(180deg);
+}
+
+/* CSS for Footer Links */
+.footer {
+  text-align: center;
+  color: #ffffff;
+  padding-bottom:20px;
+  padding-top:20px;
+  background-color:#64646d;
+}
+
+.footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active, .footer p {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer_link:hover {
+  text-shadow: 0 0 1px #ffffff;
+  font-weight: 500;
+}
+
+.left, .right {
+  padding: 0;
+}

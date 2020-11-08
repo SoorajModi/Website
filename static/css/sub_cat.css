@@ -1,9 +1,16 @@
+#first_sub_cat {
+  padding-top: 1%;
+}
+
+#final_sub_cat {
+  padding-bottom: 1%;
+}
+
 .about_arrow {
   outline: none;
 }
 
 .container {
-  background-color: #F8F8F8;
   padding-bottom: 0.5%;
   padding-top: 0px;
   border-radius: 15px;
@@ -33,9 +40,23 @@
 }
 
 .extra_info_card .card  {
-  background-color:#F0F0F0;
-  padding-top:0;
+  background-color:#F8F8F8;
+  padding-top:auto;
+  padding-bottom:auto;
   border-radius: 10px;
+}
+
+.cat_header h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: light;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.cat_link:link, .cat_link:visited, .cat_link:hover, .cat_link:active {
+  color: #000000;
+  text-decoration: none;
 }
 
 .expand_btn {
@@ -46,4 +67,8 @@
   padding-left: 50%;
   padding-right: 50%;
   color:black;
+}
+
+.expand_btn:hover {
+  color: black;
 }

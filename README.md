@@ -12,7 +12,3 @@ This website is built 100% by hand, and you can view it on soorajmodi.com.
 Install node modules: `npm install`
 
 Run server: `node server.js`
-
-or
-
-open `index.html` in a browser
