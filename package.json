@@ -2,7 +2,7 @@
   "name": "my_website",
   "version": "1.0.0",
   "description": "Sooraj Modi Website",
-  "main": "server.js",
+  "main": "app.js",
   "directories": {
     "doc": "docs"
   },
@@ -16,6 +16,9 @@
   },
   "author": "Sooraj Modi",
   "license": "ISC",
+  "engines": {
+    "node": "15.2.1"
+  },
   "bugs": {
     "url": "https://github.com/SoorajModi/my_website/issues"
   },

@@ -94,7 +94,7 @@ body {
   background-color:#64646d;
 }
 
-.footer_link:link, .footer_link:visited, .footer_link:hover, .footer_link:active, .footer p {
+.footer a:link, .footer a:visited, .footer a:hover, .footer a:active, .footer p {
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
