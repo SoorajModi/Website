@@ -1,1 +1,1 @@
-node app.js
+web: Anode app.js
