@@ -15,9 +15,9 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.get("/about", function(req, res) {
-  res.redirect("/");
-});
+// app.get("/about", function(req, res) {
+//   res.redirect("/");
+// });
 
 app.get("/experience", function(req, res) {
   res.render("experience");
@@ -35,10 +35,14 @@ app.get("/resume", function(req, res) {
   res.render("resume");
 });
 
+app.get("/contact", function(req, res) {
+  res.render("contact");
+});
+
 // 404 Errors
 app.use(function (req, res, next) {
   res.render("404");
-})
+});
 
 app.listen(8008, function(){
   console.log("Server started on port 8008");
