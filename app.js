@@ -43,6 +43,12 @@ app.use(function (req, res, next) {
   res.render("404");
 });
 
-app.listen(8008, function(){
-  console.log("Server started on port 8008");
+let port = process.env.PORT;
+if (port == null || port === "") {
+  port = 8008;
+}
+
+app.listen(port, function() {
+  console.log("Server started on port " + port);
 });
+
