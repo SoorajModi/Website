@@ -101,9 +101,9 @@ body {
   font-weight: 400;
 }
 
-.footer_link:hover {
+.footer a:hover {
   text-shadow: 0 0 1px #ffffff;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 .left, .right {
@@ -204,7 +204,7 @@ body {
 .cat_header h1 {
   text-align: center;
   font-size: 60px;
-  font-weight: lighter;
+  font-weight: 450;
   padding-top: 4%;
   padding-bottom: 4%;
 }
