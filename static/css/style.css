@@ -103,7 +103,7 @@ body {
 
 .footer a:hover {
   text-shadow: 0 0 1px #ffffff;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .left, .right {
@@ -130,8 +130,8 @@ body {
   padding: 15px 30px;
   border-radius: 40px;
   font-weight: 700;
-  -webkit-box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -204,7 +204,7 @@ body {
 .cat_header h1 {
   text-align: center;
   font-size: 60px;
-  font-weight: 450;
+  font-weight: 400;
   padding-top: 4%;
   padding-bottom: 4%;
 }
@@ -264,6 +264,11 @@ h4 .contactH4 {
   color: #505050;
 }
 
+.contact_info_block h6 a, .contact_info_block h6 a:hover, .contact_info_block h6 a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .contact_info {
   vertical-align: top;
 }
@@ -275,7 +280,6 @@ h4 .contactH4 {
 }
 
 /*404 Error Page CSS*/
-
 
 .notfound {
   position: relative;
@@ -326,7 +330,6 @@ h4 .contactH4 {
 .notfoundInner a {
   color:black;
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
