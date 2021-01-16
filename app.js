@@ -39,7 +39,7 @@ app.get("/contact", function (req, res) {
 });
 
 // 404 Errors
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   res.render("404");
 });
 

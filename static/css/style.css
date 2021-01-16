@@ -17,7 +17,7 @@ body {
 
 .nav-link:hover,
 .navbar-brand:hover {
-  text-shadow: 0 0 1.5px white;
+  text-shadow: 0 0 1px white;
   text-decoration: none;
 }
 
