@@ -3,7 +3,7 @@
 Hello! My name is Sooraj Modi and I am an aspiring software developer. I built this website to showcase my technical 
 skills, experiences, and accomplishments.
 
-This website is built 100% by hand, and you can view it [here](https://shielded-scrubland-57192.herokuapp.com/)
+You can view the site [here](https://shielded-scrubland-57192.herokuapp.com/)
 
 ## How to Run
 
