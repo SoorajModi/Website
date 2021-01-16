@@ -1,14 +1,12 @@
 # Website
 
-Hello! My name is Sooraj Modi and welcome to my website!
+Hello! My name is Sooraj Modi and I am an aspiring software developer. I built this website to showcase my technical 
+skills, experiences, and accomplishments.
 
-I am an aspiring software developer. I built this website for potential employers
-to view my accomplishments and showcase some of my web development skills.
-
-This website is built 100% by hand, and you can view it on soorajmodi.com.
+This website is built 100% by hand, and you can view it [here](https://shielded-scrubland-57192.herokuapp.com/)
 
 ## How to Run
 
 Install node modules: `npm install`
 
-Run server: `node server.js`
+Run server: `npm run start` or `node app.js`.
