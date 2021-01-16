@@ -8,6 +8,6 @@
 //   });
 // }
 
-$( ".about_sub_header" ).click(function() {
+$(".about_sub_header").click(function () {
   $(this).find("i").toggleClass("fa-plus fa-minus");
 });

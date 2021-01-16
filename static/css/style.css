@@ -1,13 +1,13 @@
 /* CSS shared across webpages */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 /* Navbar Styling */
 .nav-link {
   display: inline-block;
-  text-align:center;
-  color:white;
+  text-align: center;
+  color: white;
   font-size: 16px;
   text-decoration: none;
   padding: 10px;
@@ -15,34 +15,35 @@ body {
   transition: 0.2s;
 }
 
-.nav-link:hover, .navbar-brand:hover {
-    text-shadow: 0 0 1.5px white;
-    text-decoration: none;
+.nav-link:hover,
+.navbar-brand:hover {
+  text-shadow: 0 0 1.5px white;
+  text-decoration: none;
 }
 
 .navbar-nav > li {
-  margin-left:10px;
-  margin-right:5px;
+  margin-left: 10px;
+  margin-right: 5px;
 }
 
 .navbar_logo {
-  max-height:30px;
+  max-height: 30px;
 }
 
 .container {
-  padding-top:3.5rem;
-  padding-bottom:3.5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .divider {
-  padding-top:0;
-  padding-bottom:0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* CSS for gaps on webpage */
 .gap {
-  padding-top:3.5rem;
-  padding-bottom:5rem;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
   background-image: url("../images/gap_main.jpeg"); /* Default image used */
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 500px; /* Height of the gap */
@@ -55,7 +56,7 @@ body {
 
 .minor_gap {
   height: 150px;
-  background-image: url('../images/gap_main.jpeg');
+  background-image: url("../images/gap_main.jpeg");
 }
 
 .major_gap {
@@ -63,17 +64,17 @@ body {
 }
 
 .image {
-  vertical-align:center;
-  background-blend-mode:multiply;
-  max-height:250px;
+  vertical-align: center;
+  background-blend-mode: multiply;
+  max-height: 250px;
 }
 
 .embed-responsive {
-    position: relative;
-    display: block;
-    height:1000px;
-    width:100%;
-    overflow: scroll;
+  position: relative;
+  display: block;
+  height: 1000px;
+  width: 100%;
+  overflow: scroll;
 }
 
 /* CSS for rotating arrow */
@@ -82,19 +83,23 @@ body {
 }
 
 .rotate {
-  transform:rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* CSS for Footer Links */
 .footer {
   text-align: center;
   color: #ffffff;
-  padding-bottom:20px;
-  padding-top:20px;
-  background-color:#64646d;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #64646d;
 }
 
-.footer a:link, .footer a:visited, .footer a:hover, .footer a:active, .footer p {
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active,
+.footer p {
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
@@ -106,7 +111,8 @@ body {
   font-weight: 400;
 }
 
-.left, .right {
+.left,
+.right {
   padding: 0;
 }
 
@@ -122,7 +128,7 @@ body {
 }
 
 .home_btn {
-  color:black;
+  color: black;
   font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
@@ -147,8 +153,8 @@ body {
 }
 
 .skills {
-  text-align:center;
-  padding-bottom:20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 /* CSS For Sub Categories*/
@@ -182,7 +188,7 @@ body {
 }
 
 .sub_cat_container h2 {
-  padding-top:2.5%;
+  padding-top: 2.5%;
 }
 
 .sub_cat_container p {
@@ -194,11 +200,15 @@ body {
   padding-bottom: 1%;
 }
 
-.extra_info_card .card  {
-  background-color:#F8F8F8;
-  padding-top:auto;
-  padding-bottom:auto;
+.extra_info_card .card {
+  background-color: #f8f8f8;
+  padding-top: auto;
+  padding-bottom: auto;
   border-radius: 10px;
+}
+
+.no_bullet {
+  list-style: none;
 }
 
 .cat_header h1 {
@@ -209,7 +219,10 @@ body {
   padding-bottom: 4%;
 }
 
-.cat_link:link, .cat_link:visited, .cat_link:hover, .cat_link:active {
+.cat_link:link,
+.cat_link:visited,
+.cat_link:hover,
+.cat_link:active {
   color: #000000;
   text-decoration: none;
 }
@@ -218,7 +231,7 @@ body {
   text-align: center;
   outline: none;
   padding: -5px 50% 5%;
-  color:black;
+  color: black;
 }
 
 .expand_btn:hover {
@@ -235,7 +248,7 @@ h4 .contactH4 {
 }
 
 .contact_info_block {
-  vertical-align:middle;
+  vertical-align: middle;
 }
 
 .contact_info_block h2 {
@@ -264,7 +277,9 @@ h4 .contactH4 {
   color: #505050;
 }
 
-.contact_info_block h6 a, .contact_info_block h6 a:hover, .contact_info_block h6 a:visited {
+.contact_info_block h6 a,
+.contact_info_block h6 a:hover,
+.contact_info_block h6 a:visited {
   color: black;
   text-decoration: none;
 }
@@ -284,14 +299,14 @@ h4 .contactH4 {
 .notfound {
   position: relative;
   height: 100vh;
-  background-image: url('../images/sun_logo_black.png');
+  background-image: url("../images/sun_logo_black.png");
   /* opacity:0.1; */
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .notfound .notfoundInner {
-  opacity:1;
+  opacity: 1;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -305,12 +320,12 @@ h4 .contactH4 {
   width: 100%;
   line-height: 1.4;
   text-align: center;
-  opacity:1;
+  opacity: 1;
   color: black;
 }
 
 .notfoundInner h2 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #292929;
   font-size: 28px;
   font-weight: 700;
@@ -320,7 +335,7 @@ h4 .contactH4 {
 }
 
 .notfoundInner p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   margin-top: 0;
@@ -328,8 +343,8 @@ h4 .contactH4 {
 }
 
 .notfoundInner a {
-  color:black;
-  font-family: 'Lato', sans-serif;
+  color: black;
+  font-family: "Lato", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
