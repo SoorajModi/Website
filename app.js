@@ -14,10 +14,6 @@ app.get("/", function (req, res) {
   res.render("home");
 });
 
-// app.get("/about", function(req, res) {
-//   res.redirect("/");
-// });
-
 app.get("/experience", function (req, res) {
   res.render("experience");
 });
