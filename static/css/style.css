@@ -1,5 +1,11 @@
 /* CSS shared across webpages */
-body {
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+li {
   font-family: "Lato", sans-serif;
 }
 
@@ -17,8 +23,11 @@ body {
 
 .nav-link:hover,
 .navbar-brand:hover {
-  text-shadow: 0 0 1px white;
   text-decoration: none;
+}
+
+.nav-link:hover {
+  text-shadow: 0 0 1px white;
 }
 
 .navbar-nav > li {
@@ -38,6 +47,12 @@ body {
 .divider {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+.reach_out_link,
+.reach_out_link:hover {
+  color: black;
+  text-decoration: none;
 }
 
 /* CSS for gaps on webpage */
@@ -236,6 +251,13 @@ body {
 
 .expand_btn:hover {
   color: black;
+}
+
+.list-unstyled li a,
+.list-unstyled li a:hover,
+.list-unstyled li a:visited {
+  color: black;
+  text-decoration: none;
 }
 
 /* Contact Page CSS */

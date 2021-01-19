@@ -1,6 +1,6 @@
 # Website
 
-Hello! My name is Sooraj Modi and I am an aspiring software developer. I built this website to showcase my technical 
+Hello! My name is Sooraj Modi and I am an aspiring software developer. I built this website to showcase my technical
 skills, experiences, and accomplishments.
 
 You can view the site [here](https://shielded-scrubland-57192.herokuapp.com/)
