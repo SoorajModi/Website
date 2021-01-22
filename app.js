@@ -18,6 +18,14 @@ app.get("/experience", function (req, res) {
   res.render("experience");
 });
 
+app.get("/projects", function (req, res) {
+  res.render("projects");
+});
+
+app.get("/projects/citationbot", function(req, res) {
+  res.render("citationbot");
+});
+
 app.get("/education", function (req, res) {
   res.render("education");
 });
