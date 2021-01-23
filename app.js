@@ -1,5 +1,7 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
 const ejs = require("ejs");
 
 const app = express();
@@ -9,6 +11,17 @@ app.set("view engine", "ejs");
 app.use(express.static("static"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+}).then((r) => console.log(`Successfully connected to MongoDB: ${r}`))
+  .catch((e) => console.log(`Error starting up mongo: ${e}`));
+
+const projectScheme = {
+  title: String,
+  body: String,
+  date: { type: Date, default: Date.now },
+};
 
 app.get("/", function (req, res) {
   res.render("home");
