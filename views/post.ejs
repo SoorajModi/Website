@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+<body>
+<%- include('partials/navbar.ejs'); -%>
+<main role="main">
+    <div class="container post">
+        <h2 class="post-title"><%= title %></h2>
+        <h6><%= date %></h6>
+        <% body.forEach((paragraph) => { %>
+            <p><%= paragraph %></p>
+        <% }); %>
+    </div>
+</main>
+</body>
+<%- include('partials/footer'); -%>

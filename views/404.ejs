@@ -1,19 +1,15 @@
-<%- include('partials/header') -%>
-  <head>
-    <!-- Custom CSS -->
-  	<link rel="stylesheet" type="text/css" href="/css/404.css" />
-  </head>
-  <body>
-    <%- include('partials/navbar') -%>
-    <main role="main">
-      <div class="notfound">
+<%- include('partials/header.ejs') -%>
+<body>
+<%- include('partials/navbar.ejs') -%>
+<main role="main">
+    <div class="notfound">
         <div class="notfoundInner">
-          <h2>404 - Page not found</h2>
-          <p>This may not mean anything...</p>
-          <p>...or that I'm working on something that has blown up.</p>
-          <a class="btn btn-secondary" href="../" role="button">Home</a>
+            <h2>404 - Page not found</h2>
+            <p>This may not mean anything...</p>
+            <p>...or that I'm working on something that has blown up.</p>
+            <a class="btn btn-secondary" href="../" role="button">Home</a>
         </div>
-      </div>
-    </main>
-  </body>
-<%- include('partials/footer') -%>
+    </div>
+</main>
+</body>
+<%- include('partials/footer.ejs') -%>
