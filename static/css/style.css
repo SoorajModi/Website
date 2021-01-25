@@ -115,7 +115,6 @@ li {
 
 .footer a:link,
 .footer a:visited,
-.footer a:hover,
 .footer a:active,
 .footer p {
     font-size: 18px;
@@ -322,12 +321,18 @@ h4 .contactH4 {
 /*Blog Post CSS*/
 
 .post {
-    padding-bottom: 50%;
+    padding-bottom: 200px;
 }
 
 .post-title {
     text-align: center;
     padding-bottom: 10px;
+}
+
+.blog-link a,
+.blog-link a:hover {
+    color: black;
+    text-decoration: none;
 }
 
 /*404 Error Page CSS*/

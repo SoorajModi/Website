@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+<body>
+<%- include('partials/navbar.ejs'); -%>
+<main role="main">
+    <div class="gap major_gap">
+    </div>
+
+    <div class="cat_header">
+        <h1>Compose Blog Post</h1>
+    </div>
+
+    <div class="container" style="padding-top: 0">
+        <form class="" action="/blog/compose" method="post">
+            <div class="form-group">
+                <label for="composeTitle">Title</label>
+                <input class="form-control" type="text" name="composeTitle">
+                <label for="composeDescription">Description</label>
+                <input class="form-control" type="text" name="composeDescription">
+                <label for="composeURL">URL</label>
+                <input class="form-control" type="text" name="composeURL">
+                <label for="composeBody">Body</label>
+                <textarea class="form-control" name="composeBody" rows="8" cols="80"></textarea>
+            </div>
+            <button class="btn btn-secondary" type="submit" name="button">Publish</button>
+        </form>
+    </div>
+</main>
+</body>
+<%- include('partials/footer'); -%>
