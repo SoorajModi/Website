@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs'); -%>
+<body>
+<%- include('partials/navbar.ejs'); -%>
+<main role="main">
+    <div class="gap major_gap" style="background-image: url('images/experience.jpg');">
+    </div>
+
+    <div class="cat_header">
+        <h1>Blog</h1>
+    </div>
+
+    <div class="gap minor_gap" style="background-image: url('images/experience.jpg');">
+    </div>
+
+    <div class="container">
+        <% blog.forEach((post) => { %>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center"><%= post.title %></h5>
+                            <p class="card-text blog-link"><%= post.description %> <a href="/blog/<%= post.title %>">
+                                    Read more</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</main>
+</body>
+<%- include('partials/footer'); -%>
