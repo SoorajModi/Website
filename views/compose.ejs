@@ -20,42 +20,13 @@
                         <label for="composeDescription" style="width: 100%">Description
                             <textarea class="form-control" name="composeDescription" rows="3"></textarea>
                         </label>
-                        <label for="composeURL" style="width: 100%">URL
-                            <input class="form-control" type="text" name="composeURL">
-                        </label>
                         <label for="composeBody" style="width: 100%">Body
-<!--                            <textarea id="body" class="form-control" name="composeBody" rows="8" cols="80" oninput="this.editor.update()"></textarea>-->
                             <textarea id="body" class="form-control" name="composeBody" rows="8" cols="80"></textarea>
                         </label>
                     </div>
                     <button class="btn btn-secondary" type="submit" name="button">Publish</button>
                 </form>
             </div>
-<!--            <div class="col-md-6 col-sm-12">-->
-<!--                <div id="preview"></div>-->
-<!--                &lt;!&ndash;                <label for="preview">Rendered Post&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <textarea id="preview" class="form-control" name="composeBody" rows="19" cols="80"></textarea>&ndash;&gt;-->
-<!--                &lt;!&ndash;                </label>&ndash;&gt;-->
-<!--                <script src=<%= markdown %>></script>-->
-<!--                <script>-->
-<!--                  const md = new markdown();-->
-
-<!--                  function Editor(input, preview) {-->
-<!--                    this.update = function() {-->
-<!--                      preview.innerHTML = md.render(input);-->
-<!--                      // preview.innerHTML = input.value;-->
-<!--                    };-->
-<!--                    input.editor = this;-->
-<!--                    this.update();-->
-<!--                  }-->
-
-<!--                  let $ = function(id) {-->
-<!--                    return document.getElementById(id);-->
-<!--                  };-->
-
-<!--                  new Editor($("body"), $("preview"));-->
-<!--                </script>-->
-<!--            </div>-->
         </div>
     </div>
 </main>

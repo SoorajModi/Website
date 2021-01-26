@@ -57,7 +57,7 @@ app.post("/blog/compose", function(req, res) {
     description: req.body.composeDescription,
     body: req.body.composeBody,
     date: new Date(),
-    url: req.body.composeURL
+    url: (req.body.composeTitle).replace(/\s+/g, '-').toLowerCase()
   });
 
   blogPost.save();
@@ -66,7 +66,7 @@ app.post("/blog/compose", function(req, res) {
 });
 
 app.get("/blog/:post", function(req, res) {
-  BlogPost.findOne({ title: _.startCase(req.params.post) }, function(err, foundPost) {
+  BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
     res.render("post", {
       title: foundPost.title,
       date: foundPost.date.toLocaleDateString("en-US", {
@@ -75,53 +75,56 @@ app.get("/blog/:post", function(req, res) {
         month: "long",
         day: "numeric"
       }),
-      body: md.render(foundPost.body),
-      url: foundPost.url
+      body: md.render(foundPost.body)
     });
   });
 });
 
 app.get("/blog/:post/edit", function(req, res) {
-  BlogPost.findOne({ title: _.startCase(req.params.post) }, function(err, foundPost) {
-    res.render("editPost", {
-      renderURL: req.params.post,
-      title: foundPost.title,
-      date: foundPost.date,
-      description: foundPost.description,
-      body: foundPost.body,
-      url: foundPost.url
-    });
+  BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
+    if (!foundPost) {
+      res.redirect("/404");
+    } else {
+      res.render("editPost", {
+        url: foundPost.url,
+        title: foundPost.title,
+        date: foundPost.date,
+        description: foundPost.description,
+        body: foundPost.body
+      });
+    }
   });
 });
 
 app.post("/blog/:post/edit", function(req, res) {
-  BlogPost.findOneAndUpdate({ title: _.startCase(req.params.post) }, {
+  let newURL = (req.body.editTitle).replace(/\s+/g, '-').toLowerCase();
+
+  BlogPost.findOneAndUpdate({ url: req.params.post }, {
     title: _.startCase(req.body.editTitle),
     description: req.body.editDescription,
     body: req.body.editBody,
     date: req.body.editDate,
-    url: req.body.editURL
+    url: newURL
   }, {}, function() {
   });
 
-  res.redirect("/blog/" + req.body.editTitle);
+  res.redirect("/blog/" + newURL);
 });
 
 app.get("/blog/:post/delete", function(req, res) {
-  BlogPost.findOne({ title: _.startCase(req.params.post) }, function(err, foundPost) {
+  BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
     res.render("deletePost", {
       renderURL: req.params.post,
       title: foundPost.title,
       date: foundPost.date,
       description: foundPost.description,
-      body: foundPost.body,
-      url: foundPost.url
+      body: foundPost.body
     });
   });
 });
 
 app.post("/blog/:post/delete", function(req, res) {
-  BlogPost.findOneAndDelete({ title: _.startCase(req.params.post) }, {}, function() {
+  BlogPost.findOneAndDelete({ url: req.params.post }, {}, function() {
   });
   res.redirect("/blog");
 });
