@@ -1,0 +1,36 @@
+<%- include('partials/header'); -%>
+<body>
+<%- include('partials/navbar.ejs'); -%>
+<main role="main">
+    <div class="gap major_gap">
+    </div>
+
+    <div class="cat_header">
+        <h1>Edit Blog Post</h1>
+    </div>
+
+    <div class="container" style="padding-top: 0">
+        <form action="/blog/<%= renderURL %>/edit" method="post">
+            <div class="form-group">
+                <label for="editTitle" style="width: 100%">Title
+                    <input class="form-control" type="text" name="editTitle" value="<%= title %>">
+                </label>
+                <label for="editDate" style="width: 100%">Date
+                    <input class="form-control" type="text" name="editDate" value="<%= date %>">
+                </label>
+                <label for="editDescription" style="width: 100%">Description
+                    <textarea class="form-control" name="editDescription" rows="3"><%= description %></textarea>
+                </label>
+                <label for="editURL" style="width: 100%">URL
+                    <input class="form-control" type="text" name="editURL" value="<%= url %>">
+                </label>
+                <label for="editBody" style="width: 100%">Body
+                    <textarea class="form-control" name="editBody" rows="8" cols="80"><%= body %></textarea>
+                </label>
+            </div>
+            <button class="btn btn-secondary" type="submit" name="button">Publish Changes</button>
+        </form>
+    </div>
+</main>
+</body>
+<%- include('partials/footer'); -%>
