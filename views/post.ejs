@@ -5,9 +5,7 @@
     <div class="container post">
         <h2 class="post-title"><%= title %></h2>
         <h6><%= date %></h6>
-        <% body.forEach((paragraph) => { %>
-            <p><%= paragraph %></p>
-        <% }); %>
+        <%- body %>
     </div>
 </main>
 </body>
