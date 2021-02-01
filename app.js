@@ -7,7 +7,6 @@ const MarkdownIt = require("markdown-it");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-
 const md = new MarkdownIt();
 const app = express();
 
@@ -21,8 +20,8 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize({}));
+app.use(passport.session({}));
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
@@ -30,13 +29,13 @@ mongoose.connect(process.env.DATABASE_URL, {
 }).then(() => console.log(`Successfully connected to MongoDB`))
   .catch((e) => console.log(`Error connecting to MongoDB: ${e}`));
 
-const blogSchema = {
+const blogSchema = new mongoose.Schema({
   title: String,
   description: String,
   date: { type: Date, default: Date.now },
   body: String,
   url: String
-};
+});
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -127,30 +126,34 @@ app.post("/blog/compose", function(req, res) {
       url: (req.body.composeTitle).replace(/\s+/g, "-").toLowerCase()
     });
 
-    blogPost.save((r) => console.log("New blog post added: " + r));
+    blogPost.save(() => console.log("New blog post added: " + req.body.composeTitle));
     res.redirect("/blog");
   }
 });
 
 app.get("/blog/:post", function(req, res) {
   BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
-    res.render("post", {
-      title: foundPost.title,
-      date: foundPost.date.toLocaleDateString("en-US", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-      }),
-      body: md.render(foundPost.body)
-    });
+    if (!err && foundPost) {
+      res.render("post", {
+        title: foundPost.title,
+        date: foundPost.date.toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        }),
+        body: md.render(foundPost.body)
+      });
+    } else {
+      res.redirect("/404");
+    }
   });
 });
 
 app.get("/blog/:post/edit", function(req, res) {
   if (req.isAuthenticated()) {
     BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
-      if (!foundPost) {
+      if (!foundPost || err) {
         res.redirect("/404");
       } else {
         res.render("editPost", {
@@ -169,15 +172,21 @@ app.get("/blog/:post/edit", function(req, res) {
 
 app.post("/blog/:post/edit", function(req, res) {
   if (req.isAuthenticated()) {
+    let newTitle = _.startCase(req.body.editTitle);
     let newURL = (req.body.editTitle).replace(/\s+/g, "-").toLowerCase();
 
     BlogPost.findOneAndUpdate({ url: req.params.post }, {
-      title: _.startCase(req.body.editTitle),
+      title: newTitle,
       description: req.body.editDescription,
       body: req.body.editBody,
       date: req.body.editDate,
       url: newURL
-    }, {}, function() {
+    }, {}, (err) => {
+      if (!err) {
+        console.log("Successfully edited blog post: " + newTitle);
+      } else {
+        console.log("Error: could not update blogpost: " + err);
+      }
     });
 
     res.redirect("/blog/" + newURL);
@@ -189,13 +198,18 @@ app.post("/blog/:post/edit", function(req, res) {
 app.get("/blog/:post/delete", function(req, res) {
   if (req.isAuthenticated()) {
     BlogPost.findOne({ url: req.params.post }, function(err, foundPost) {
-      res.render("deletePost", {
-        renderURL: req.params.post,
-        title: foundPost.title,
-        date: foundPost.date,
-        description: foundPost.description,
-        body: foundPost.body
-      });
+      if (!err && foundPost) {
+        return res.render("deletePost", {
+          renderURL: req.params.post,
+          title: foundPost.title,
+          date: foundPost.date,
+          description: foundPost.description,
+          body: foundPost.body
+        });
+      } else {
+        console.log("Error: could not delete post, not found");
+        res.redirect("/blog/" + req.params.post);
+      }
     });
   } else {
     res.redirect("/blog/" + req.params.post);
@@ -204,8 +218,14 @@ app.get("/blog/:post/delete", function(req, res) {
 
 app.post("/blog/:post/delete", function(req, res) {
   if (req.isAuthenticated()) {
-    BlogPost.findOneAndDelete({ url: req.params.post }, {}, function() {
+    BlogPost.findOneAndDelete({ url: req.params.post }, {}, (err, doc) => {
+      if (!err) {
+        console.log("Successfully deleted blog post: " + doc.title);
+      } else {
+        console.log("Error trying to delete blog post: " + err);
+      }
     });
+
     res.redirect("/blog");
   } else {
     res.redirect("/blog/" + req.params.post);
