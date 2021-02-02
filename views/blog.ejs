@@ -2,14 +2,11 @@
 <body>
 <%- include('partials/navbar.ejs'); -%>
 <main role="main">
-    <div class="gap major_gap" style="background-image: url('images/experience.jpg');">
+    <div class="gap major-gap" style="background-image: url('images/blog.png');">
     </div>
 
-    <div class="cat_header">
+    <div class="cat-header">
         <h1>Blog</h1>
-    </div>
-
-    <div class="gap minor_gap" style="background-image: url('images/experience.jpg');">
     </div>
 
     <div class="container">
@@ -18,9 +15,9 @@
                 <div class="row g-0">
                     <div class="col-md-12">
                         <div class="card-body">
-                            <h5 class="card-title" style="text-align: center"><%= post.title %></h5>
-                            <p class="card-text blog-link"><%= post.description %> <a href="/blog/<%= post.url %>">
-                                    Read more</a>.</p>
+                            <h5 class="card-title text-center"><%= post.title %></h5>
+                            <p class="card-text blog-link"><%= post.description %></p>
+                            <p class="card-text blog-link text-center"><a href="/blog/<%= post.url %>">Read more</a></p>
                         </div>
                     </div>
                 </div>

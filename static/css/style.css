@@ -16,6 +16,11 @@ pre code {
     padding: 20px;
 }
 
+p a,
+p a:hover {
+    color: black;
+}
+
 /* Navbar Styling */
 .nav-link {
     display: inline-block;
@@ -42,7 +47,7 @@ pre code {
     margin-right: 5px;
 }
 
-.navbar_logo {
+.navbar-logo {
     max-height: 30px;
 }
 
@@ -56,8 +61,8 @@ pre code {
     padding-bottom: 0;
 }
 
-.reach_out_link,
-.reach_out_link:hover {
+.reach-out-link,
+.reach-out-link:hover {
     color: black;
     text-decoration: none;
 }
@@ -76,12 +81,12 @@ pre code {
     background-attachment: fixed;
 }
 
-.minor_gap {
+.minor-gap {
     height: 150px;
     background-image: url("../images/gap_main.jpeg");
 }
 
-.major_gap {
+.major-gap {
     height: 700px;
 }
 
@@ -140,8 +145,8 @@ pre code {
     padding: 0;
 }
 
-/* Custom CSS for homepage*/
-.home_header {
+/* Custom CSS for homepage */
+.home-header {
     background-image: url("../images/gap_main.jpeg"); /* The image used */
     background-color: #cccccc; /* Used if the image is unavailable */
     height: 500px; /* Height of the gap */
@@ -151,7 +156,7 @@ pre code {
     background-attachment: fixed; /* Keep background image in fixed position */
 }
 
-.home_btn {
+.home-btn {
     color: black;
     font-size: 14px;
     text-decoration: none;
@@ -166,13 +171,13 @@ pre code {
     transition: 0.2s all;
 }
 
-.home_btn:hover {
+.home-btn:hover {
     color: #fff;
     background-color: #64646d;
     text-decoration: none;
 }
 
-.about_padding {
+.about-padding {
     padding-top: 2.5%;
 }
 
@@ -181,21 +186,21 @@ pre code {
     padding-bottom: 20px;
 }
 
-/* CSS For Sub Categories*/
+/* CSS For Sub Categories */
 
-#first_sub_cat {
+#first-sub-cat {
     padding-top: 1%;
 }
 
-#final_sub_cat {
+#final-sub-cat {
     padding-bottom: 1%;
 }
 
-.about_arrow {
+.about-arrow {
     outline: none;
 }
 
-.sub_cat_container {
+.sub-cat-container {
     padding-bottom: 0.5%;
     padding-top: 0;
     border-radius: 15px;
@@ -206,59 +211,58 @@ pre code {
     padding-bottom: 0;
 }
 
-.sub_cat_container a {
+.sub-cat-container a {
     padding-bottom: 10%;
     padding-top: 0;
 }
 
-.sub_cat_container h2 {
+.sub-cat-container h2 {
     padding-top: 2.5%;
 }
 
-.sub_cat_container p {
+.sub-cat-container p {
     padding-right: 5%;
     padding-left: 5%;
 }
 
-.sub_cat_container .extra_info_card {
+.sub-cat-container .extra-info-card {
     padding-bottom: 1%;
 }
 
-.extra_info_card .card {
+.extra-info-card .card {
     background-color: #f8f8f8;
     padding-top: auto;
     padding-bottom: auto;
     border-radius: 10px;
 }
 
-.no_bullet {
+.no-bullet {
     list-style: none;
 }
 
-.cat_header h1 {
+.cat-header h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 400;
     padding-top: 4%;
-    padding-bottom: 4%;
 }
 
-.cat_link:link,
-.cat_link:visited,
-.cat_link:hover,
-.cat_link:active {
+.cat-link:link,
+.cat-link:visited,
+.cat-link:hover,
+.cat-link:active {
     color: #000000;
     text-decoration: none;
 }
 
-.expand_btn {
+.expand-btn {
     text-align: center;
     outline: none;
     padding: -5px 50% 5%;
     color: black;
 }
 
-.expand_btn:hover {
+.expand-btn:hover {
     color: black;
 }
 
@@ -278,29 +282,33 @@ h4 .contactH4 {
     color: #505050;
 }
 
-.contact_info_block {
+.contact-info-block {
     vertical-align: middle;
 }
 
-.contact_info_block h2 {
+.contact-info-block {
+    font-family: "Lato", sans-serif;
+}
+
+.contact-info-block h2 {
     font-size: 40px;
     font-weight: lighter;
 }
 
-.contact_info_block h4 {
+.contact-info-block h4 {
     font-size: 18px;
     padding-bottom: 1.5rem;
     font-weight: 300;
     color: #505050;
 }
 
-.contact_info_block h5 {
+.contact-info-block h5 {
     padding-top: 0;
     padding-bottom: 0;
     font-weight: 300;
 }
 
-.contact_info_block h6 {
+.contact-info-block h6 {
     padding-top: 0;
     padding-bottom: 1rem;
     font-weight: 300;
@@ -308,18 +316,18 @@ h4 .contactH4 {
     color: #505050;
 }
 
-.contact_info_block h6 a,
-.contact_info_block h6 a:hover,
-.contact_info_block h6 a:visited {
+.contact-info-block h6 a,
+.contact-info-block h6 a:hover,
+.contact-info-block h6 a:visited {
     color: black;
     text-decoration: none;
 }
 
-.contact_info {
+.contact-info {
     vertical-align: top;
 }
 
-.contact_icons {
+.contact-icons {
     padding-top: 5%;
     display: flex;
     justify-content: space-evenly;
@@ -340,7 +348,7 @@ h4 .contactH4 {
 
 /*404 Error Page CSS*/
 
-.notfound {
+.not-found {
     position: relative;
     height: 100vh;
     background-image: url("../images/sun_logo_black.png");
@@ -349,7 +357,7 @@ h4 .contactH4 {
     background-position: center center;
 }
 
-.notfound .notfoundInner {
+.not-found .not-found-inner {
     opacity: 1;
     position: absolute;
     left: 50%;
@@ -359,7 +367,7 @@ h4 .contactH4 {
     transform: translate(-50%, -50%);
 }
 
-.notfoundInner {
+.not-found-inner {
     max-width: 710px;
     width: 100%;
     line-height: 1.4;
@@ -368,7 +376,7 @@ h4 .contactH4 {
     color: black;
 }
 
-.notfoundInner h2 {
+.not-found-inner h2 {
     font-family: "Lato", sans-serif;
     color: #292929;
     font-size: 28px;
@@ -378,7 +386,7 @@ h4 .contactH4 {
     margin-top: 0;
 }
 
-.notfoundInner p {
+.not-found-inner p {
     font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -386,7 +394,7 @@ h4 .contactH4 {
     margin-bottom: 15px;
 }
 
-.notfoundInner a {
+.not-found-inner a {
     color: black;
     font-family: "Lato", sans-serif;
     text-decoration: none;
@@ -401,7 +409,7 @@ h4 .contactH4 {
     transition: 0.2s all;
 }
 
-.notfoundInner a:hover {
+.not-found-inner a:hover {
     color: #fff;
     background-color: black;
 }
