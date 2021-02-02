@@ -9,6 +9,13 @@ li {
     font-family: "Lato", sans-serif;
 }
 
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+}
+
 /* Navbar Styling */
 .nav-link {
     display: inline-block;
@@ -319,10 +326,6 @@ h4 .contactH4 {
 }
 
 /*Blog Post CSS*/
-
-.post {
-    padding-bottom: 200px;
-}
 
 .post-title {
     text-align: center;
