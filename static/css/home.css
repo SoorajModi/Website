@@ -1,0 +1,46 @@
+/* Custom CSS for homepage */
+.home-header {
+    background-image: url("../images/gap_main.jpeg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* Height of the gap */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed; /* Keep background image in fixed position */
+}
+
+.home-btn {
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 40px;
+    font-weight: 700;
+    -webkit-box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.home-btn:hover {
+    color: #fff;
+    background-color: #64646d;
+    text-decoration: none;
+}
+
+.about-padding {
+    padding-top: 2.5%;
+}
+
+.skills {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.reach-out-link,
+.reach-out-link:hover {
+    color: black;
+    text-decoration: none;
+}

@@ -1,0 +1,8 @@
+/* CSS for rotating arrow */
+.animate-icon {
+    transition: 0.4s;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}

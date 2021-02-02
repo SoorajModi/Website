@@ -1,0 +1,29 @@
+/* Navbar Styling */
+.nav-link {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 1px white;
+}
+
+.navbar-nav > li {
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.navbar-logo {
+    max-height: 30px;
+}

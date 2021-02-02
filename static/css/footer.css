@@ -1,0 +1,26 @@
+/* CSS for Footer Links */
+.footer {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    color: #ffffff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #64646d;
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:active,
+.footer p {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.footer a:hover {
+    text-shadow: 0 0 1px #ffffff;
+    font-weight: 400;
+}

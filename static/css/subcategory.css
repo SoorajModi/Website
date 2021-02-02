@@ -1,0 +1,85 @@
+/* CSS For Sub Categories */
+#first-sub-cat {
+    padding-top: 1%;
+}
+
+#final-sub-cat {
+    padding-bottom: 1%;
+}
+
+.about-arrow {
+    outline: none;
+}
+
+.sub-cat-container {
+    padding-bottom: 0.5%;
+    padding-top: 0;
+    border-radius: 15px;
+}
+
+.divider {
+    border-radius: 0;
+    padding-bottom: 0;
+}
+
+.sub-cat-container a {
+    padding-bottom: 10%;
+    padding-top: 0;
+}
+
+.sub-cat-container h2 {
+    padding-top: 2.5%;
+}
+
+.sub-cat-container p {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.sub-cat-container .extra-info-card {
+    padding-bottom: 1%;
+}
+
+.extra-info-card .card {
+    background-color: #f8f8f8;
+    padding-top: auto;
+    padding-bottom: auto;
+    border-radius: 10px;
+}
+
+.no-bullet {
+    list-style: none;
+}
+
+.cat-header h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    padding-top: 4%;
+}
+
+.cat-link:link,
+.cat-link:visited,
+.cat-link:hover,
+.cat-link:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.expand-btn {
+    text-align: center;
+    outline: none;
+    padding: -5px 50% 5%;
+    color: black;
+}
+
+.expand-btn:hover {
+    color: black;
+}
+
+.list-unstyled li a,
+.list-unstyled li a:hover,
+.list-unstyled li a:visited {
+    color: black;
+    text-decoration: none;
+}
