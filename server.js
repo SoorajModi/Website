@@ -1,5 +1,6 @@
+const source = require("rfr");
 require("dotenv").config();
-require("./models/user");
+source("models/user");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -9,7 +10,13 @@ const session = require("express-session");
 const passport = require("passport");
 const md = new MarkdownIt();
 const app = express();
-const { getPosts, getOnePost, createPost, updatePost, deletePost } = require("./models/blogPost");
+const { getPosts, getOnePost, createPost, updatePost, deletePost } = source("models/blogPost");
+const HomeController = source("controllers/homeController");
+const ExperienceController = source("controllers/experienceController");
+const EducationController = source("controllers/educationController");
+const VolunteerController = source("controllers/volunteerController");
+const ResumeController = source("controllers/resumeController");
+const ContactController = source("controllers/contactController");
 
 app.set("view engine", "ejs");
 
@@ -31,13 +38,12 @@ mongoose.connect(process.env.DATABASE_URL, {
 }).then(() => console.log(`Successfully connected to MongoDB`))
   .catch((e) => console.log(`Error connecting to MongoDB: ${e}`));
 
-app.get("/", function(req, res) {
-  res.render("home");
-});
-
-app.get("/experience", function(req, res) {
-  res.render("experience");
-});
+app.get("/", HomeController.get);
+app.get("/experience", ExperienceController.get);
+app.get("/education", EducationController.get);
+app.get("/volunteering", VolunteerController.get);
+app.get("/resume", ResumeController.get);
+app.get("/contact", ContactController.get);
 
 app.get("/blog", function(req, res) {
   getPosts({}).then((foundPosts) => {
@@ -179,22 +185,6 @@ app.post("/blog/:post/delete", function(req, res) {
   } else {
     res.redirect("/blog/" + req.params.post);
   }
-});
-
-app.get("/education", function(req, res) {
-  res.render("education");
-});
-
-app.get("/volunteering", function(req, res) {
-  res.render("volunteering");
-});
-
-app.get("/resume", function(req, res) {
-  res.render("resume");
-});
-
-app.get("/contact", function(req, res) {
-  res.render("contact");
 });
 
 // 404 Errors
