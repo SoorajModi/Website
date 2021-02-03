@@ -1,9 +1,9 @@
 // Rotate arrow upon click
-var num_expand = document.getElementsByClassName("expand-btn");
+const num_expand = document.getElementsByClassName('expand-btn');
 
-for (var i = 0; i < num_expand.length; i++) {
-  num_expand[i].addEventListener("click", function () {
-    var icon = this.querySelector(".expand-btn i.fa");
-    icon.classList.toggle("rotate");
+for (let i = 0; i < num_expand.length; i++) {
+  num_expand[i].addEventListener('click', function () {
+    const icon = this.querySelector('.expand-btn i.fa');
+    icon.classList.toggle('rotate');
   });
 }

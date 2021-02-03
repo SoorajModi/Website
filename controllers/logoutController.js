@@ -1,8 +1,8 @@
 const LogoutController = {
-  get: function(req, res) {
+  get(req, res) {
     req.logout();
-    res.redirect("/blog");
-  }
+    res.redirect('/blog');
+  },
 };
 
 module.exports = LogoutController;

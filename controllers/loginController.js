@@ -1,12 +1,12 @@
 const passport = require("passport");
 
 const LoginController = {
-  get: function(req, res) {
+  get(req, res) {
     res.render("login");
   },
 
-  post: function(req, res) {
-    passport.authenticate("local", {}, function(err, user) {
+  post(req, res) {
+    passport.authenticate("local", {}, (err, user) => {
       if (err) {
         console.log(err);
         return res.redirect("/login");
@@ -17,12 +17,13 @@ const LoginController = {
         return res.redirect("/login");
       }
 
-      req.logIn(user, function(err) {
-        if (err) {
-          console.log("Error while logging in: " + err);
+      req.logIn(user, (error) => {
+        if (error) {
+          console.log(`Error while logging in: ${err}`);
         }
-        return res.redirect("/blog");
       });
+
+      return res.redirect("/blog");
     })(req, res);
   }
 };

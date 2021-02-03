@@ -1,17 +1,17 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
-const _ = require("lodash");
-const passport = require("passport");
-const passportLocalMongoose = require("passport-local-mongoose");
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
 });
 
 userSchema.plugin(passportLocalMongoose); // Used to hash and salt users, and save to MongoDB
 
-const UserModel = mongoose.model("User", userSchema);
+const UserModel = mongoose.model('User', userSchema);
 
 passport.use(UserModel.createStrategy());
 passport.serializeUser(UserModel.serializeUser());

@@ -1,7 +1,7 @@
 const ContactController = {
-  get: function(req, res) {
-    res.render("contact");
-  }
+  get(req, res) {
+    res.render('contact');
+  },
 };
 
 module.exports = ContactController;
