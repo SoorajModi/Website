@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("./models/user");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -6,7 +7,6 @@ const _ = require("lodash");
 const MarkdownIt = require("markdown-it");
 const session = require("express-session");
 const passport = require("passport");
-const passportLocalMongoose = require("passport-local-mongoose");
 const md = new MarkdownIt();
 const app = express();
 const { getPosts, getOnePost, createPost, updatePost, deletePost } = require("./models/blogPost");
@@ -30,19 +30,6 @@ mongoose.connect(process.env.DATABASE_URL, {
   useFindAndModify: false
 }).then(() => console.log(`Successfully connected to MongoDB`))
   .catch((e) => console.log(`Error connecting to MongoDB: ${e}`));
-
-const userSchema = new mongoose.Schema({
-  username: String,
-  password: String
-});
-
-userSchema.plugin(passportLocalMongoose); // Used to hash and salt users, and save to MongoDB
-
-const User = mongoose.model("User", userSchema);
-
-passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
 
 app.get("/", function(req, res) {
   res.render("home");
