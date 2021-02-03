@@ -11,7 +11,7 @@ const blogSchema = new Schema({
   url: String,
 });
 
-const BlogModel = mongoose.model('BlogPostTest', blogSchema);
+const BlogModel = mongoose.model('BlogPost', blogSchema);
 
 function getPosts(filter) {
   return BlogModel.find(filter);

@@ -5,8 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
-const routes = source("routes/routes");
-const adminRoutes = source("routes/adminRoutes");
+const router = source("routes");
 source("models/userModel");    // Load model
 
 mongoose.connect(process.env.DATABASE_URL, {
@@ -30,7 +29,6 @@ app.use(session({
 }));
 app.use(passport.initialize({}));
 app.use(passport.session({}));
-app.use('/', adminRoutes);
-app.use('/', routes);
+app.use(router);
 
 module.exports = app;
