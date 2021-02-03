@@ -10,18 +10,18 @@ const blogSchema = new Schema({
   url: String
 });
 
-const BlogPost = mongoose.model("BlogPostTest", blogSchema);
+const BlogModel = mongoose.model("BlogPostTest", blogSchema);
 
 function getPosts(filter) {
-  return BlogPost.find(filter);
+  return BlogModel.find(filter);
 }
 
 function getOnePost(filter) {
-  return BlogPost.findOne(filter);
+  return BlogModel.findOne(filter);
 }
 
 function createPost(req) {
-  const blogPost = new BlogPost({
+  const blogPost = new BlogModel({
     title: _.startCase(req.body.composeTitle),
     description: req.body.composeDescription,
     body: req.body.composeBody,
@@ -35,13 +35,13 @@ function createPost(req) {
 }
 
 function updatePost(filter, update) {
-  BlogPost.findOneAndUpdate(filter, update)
+  BlogModel.findOneAndUpdate(filter, update)
     .then(res => console.log("Successfully edited blog post: " + res))
     .catch(err => console.log("Error: could not update blogpost: " + err));
 }
 
 function deletePost(filter) {
-  BlogPost.findOneAndDelete(filter)
+  BlogModel.findOneAndDelete(filter)
     .then(res => console.log("Successfully deleted Blog Post: " + res))
     .catch(err => console.log("Error trying to delete blog post: " + err));
 }

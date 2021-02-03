@@ -1,6 +1,6 @@
 const source = require("rfr");
 const MarkdownIt = require("markdown-it");
-const { getOnePost, createPost, updatePost, deletePost } = source("models/blogPost");
+const { getOnePost, createPost, updatePost, deletePost } = source("models/blogModel");
 const _ = require("lodash");
 
 const AdminController = {
