@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
 const router = source("routes");
 source("models/userModel");    // Load model
@@ -25,7 +26,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: new MongoStore({ mongooseConnection: mongoose.connection })
 }));
 app.use(passport.initialize({}));
 app.use(passport.session({}));
