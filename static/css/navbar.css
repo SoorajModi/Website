@@ -1,29 +1,66 @@
-/* Navbar Styling */
-.nav-link {
-    display: inline-block;
+#sidebar {
+    background-color: #242526;
+    height: 100%;
     text-align: center;
+    vertical-align: center;
+    /*width: 100%;*/
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+
+#sidebar-title h3 {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-30%, -50%);
+    background: #242526;
+    font-size: 48px;
     color: white;
-    font-size: 16px;
+    padding: 0;
+}
+
+#sidebar ul {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    background: #242526;
+}
+
+#sidebar ul li {
+    margin: 10px 0;
+    background: #242526;
+    font-size: 18px;
+}
+
+#sidebar ul li a {
+    background: #242526;
+    color: white;
     text-decoration: none;
-    padding: 10px;
-    font-weight: 400;
-    transition: 0.2s;
 }
 
-.nav-link:hover,
-.navbar-brand:hover {
-    text-decoration: none;
+#sidebar ul li a:hover {
+    text-shadow: 0 0 1px #fa4616;
+    color: #fa4616;
 }
 
-.nav-link:hover {
-    text-shadow: 0 0 1px white;
-}
-
-.navbar-nav > li {
-    margin-left: 10px;
-    margin-right: 5px;
-}
+/* Navabar Logo */
 
 .navbar-logo {
-    max-height: 30px;
+    max-height: 50px;
+}
+
+@media screen and (width: 480px) {
+    #sidebar {
+        width: 100px;
+    }
 }

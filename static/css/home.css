@@ -1,46 +1,37 @@
-/* Custom CSS for homepage */
-.home-header {
-    background-image: url("../images/gap_main.jpeg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* Height of the gap */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    background-attachment: fixed; /* Keep background image in fixed position */
+.home-main {
+    margin-left: 350px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 5vh;
 }
 
-.home-btn {
-    color: black;
-    font-size: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 40px;
-    font-weight: 700;
-    -webkit-box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.3);
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+.home-main h1 {
+    padding-top: 15vh;
+    font-size: 96px;
 }
 
-.home-btn:hover {
-    color: #fff;
-    background-color: #64646d;
-    text-decoration: none;
+.home-main h2 {
+    padding-top: 20vh;
+    font-size: 48px;
+    padding-bottom: 2vh;
 }
 
-.about-padding {
-    padding-top: 2.5%;
+.home-main p {
+    font-size: 20px;
 }
 
-.skills {
-    text-align: center;
-    padding-bottom: 20px;
+.home-sub-header h2 {
+    padding-top: 10vh;
+    font-size: 48px;
+    padding-bottom: 2vh;
 }
 
-.reach-out-link,
-.reach-out-link:hover {
-    color: black;
-    text-decoration: none;
+.home-sub-header p {
+    font-size: 20px;
+}
+
+@media screen and (width: 480px) {
+    .home-main {
+        margin-left: 100px;
+    }
 }

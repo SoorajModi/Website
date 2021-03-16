@@ -1,77 +1,22 @@
-/* CSS shared across webpages */
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-li {
+* {
     font-family: "Lato", sans-serif;
+    background-color: #F5F5F5;
 }
 
-/* Format code blocks */
-pre code {
-    background-color: #eee;
-    border: 1px solid #999;
-    display: block;
-    padding: 20px;
+html {
+    height: 100%;
+    width: 100%;
+    padding:0;
 }
 
-/* Set default colors of links*/
-p a,
-p a:hover {
-    color: black;
+body {
+    height: 100%;
+    width: 100%;
 }
 
-/* Increase padding for containers */
 .container {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-}
-
-.divider {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* CSS for gaps on webpage */
-.gap {
-    padding-top: 3.5rem;
-    padding-bottom: 5rem;
-    background-image: url("../images/gap_main.jpeg"); /* Default image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* Height of the gap */
-    width: 100%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    background-attachment: fixed;
-}
-
-.minor-gap {
-    height: 150px;
-    background-image: url("../images/gap_main.jpeg");
-}
-
-.major-gap {
-    height: 700px;
-}
-
-.image {
-    vertical-align: center;
-    background-blend-mode: multiply;
-    max-height: 250px;
-}
-
-.embed-responsive {
-    position: relative;
-    display: block;
-    height: 1000px;
-    width: 100%;
-    overflow: scroll;
-}
-
-.left,
-.right {
+    margin-left: 0;
+    margin-right: 0;
     padding: 0;
+    max-width: 100%;
 }
