@@ -59,8 +59,12 @@
     max-height: 50px;
 }
 
-@media screen and (width: 480px) {
+@media screen and (max-width: 800px) {
     #sidebar {
-        width: 100px;
+        width: 200px;
+    }
+
+    #sidebar-title h3 {
+        left: 40%;
     }
 }

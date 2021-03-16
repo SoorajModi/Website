@@ -30,8 +30,10 @@
     font-size: 20px;
 }
 
-@media screen and (width: 480px) {
+@media screen and (max-width: 800px) {
     .home-main {
-        margin-left: 100px;
+        margin-left: 200px;
+        padding-left: 5vh;
+        padding-right: 5vh;
     }
 }
