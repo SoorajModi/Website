@@ -14,11 +14,37 @@
     list-style: none;
 }
 
+.cat-header {
+    text-align: left;
+}
+
 .cat-header h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 400;
     padding-top: 4%;
+}
+
+.cat-header h2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    color: black;
+}
+
+.cat-header h6 {
+    text-align: left;
+}
+
+.cat-header p {
+    text-align: left;
+}
+
+.cat-list h2 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: black;
 }
 
 .cat-link:link,

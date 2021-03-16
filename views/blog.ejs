@@ -13,14 +13,14 @@
                 laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
             </h2>
 
-            <hr>
-
             <% blog.forEach((post) => { %>
-                <div class="card border-0">
+                <hr>
+                <div class="card border-0 blog-block">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><%= post.title %></h5>
-<!--                        <p class="card-text blog-link"><%= post.description %></p>-->
-                        <p><%= post.body.substring(0, 600) + "..." %>><a href="/blog/<%= post.url %>">Read more</a></p>
+                        <h5 class="card-title blog-title"><%= post.title %></h5>
+                        <h6><%= post.date %></h6>
+                        <p class="blog-content"><%= post.body.substring(0, 600) + "..." %>><a
+                                    href="/blog/<%= post.url %>">Read more</a></p>
                     </div>
                 </div>
             <% }); %>
@@ -28,4 +28,5 @@
     </main>
 </div>
 </body>
+<%- include('partials/footer'); -%>
 </html>
