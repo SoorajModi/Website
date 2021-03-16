@@ -20,3 +20,30 @@ body {
     padding: 0;
     max-width: 100%;
 }
+
+.main-header {
+    margin-left: 350px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 5vh;
+}
+
+.main-header h1 {
+    padding-top: 15vh;
+    font-size: 96px;
+}
+
+.main-header h2 {
+    padding-top: 45vh;
+    font-size: 40px;
+    padding-bottom: 10vh;
+    color: #686868;
+}
+
+@media screen and (max-width: 800px) {
+    .home-main {
+        margin-left: 200px;
+        padding-left: 5vh;
+        padding-right: 5vh;
+    }
+}
