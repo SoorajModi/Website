@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('partials/header'); -%>
+<body>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Compose Exp Post</h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <form action="/education/compose" method="post">
+                            <div class="form-group">
+                                <label for="composeTitle">Title
+                                    <input class="form-control" type="text" name="composeTitle">
+                                </label>
+                                <label for="composeSubheading">Subheading
+                                    <textarea class="form-control" name="composeSubheading" rows="3"></textarea>
+                                </label>
+                                <label for="composeBody">Body
+                                    <textarea id="body" class="form-control" name="composeBody" rows="8"
+                                              cols="80"></textarea>
+                                </label>
+                            </div>
+                            <div class="submit-btn">
+                                <button class="btn btn-secondary" type="submit" name="button">Publish</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+<%- include('partials/footer'); -%>
+</html>

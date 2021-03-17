@@ -16,6 +16,8 @@ const EditController = source('controllers/adminControllers/editController');
 const DeleteController = source('controllers/adminControllers/deleteController');
 const ComposeExpController = source('controllers/adminControllers/composeExpController');
 const ComposeVolController = source('controllers/adminControllers/composeVolController');
+const ComposeEduController = source('controllers/adminControllers/composeEduController');
+const ComposeCertController = source('controllers/adminControllers/composeCertController');
 
 const router = express();
 
@@ -47,6 +49,12 @@ router.post('/experience/compose', ComposeExpController.post);
 
 router.get('/volunteering/compose', ComposeVolController.get);
 router.post('/volunteering/compose', ComposeVolController.post);
+
+router.get('/education/compose', ComposeEduController.get);
+router.post('/education/compose', ComposeEduController.post);
+
+router.get('/education/certification/compose', ComposeCertController.get);
+router.post('/education/certification/compose', ComposeCertController.post);
 
 router.get('/blog/:post', BlogController.getPost);  // Must be below /blog/compose route
 

@@ -1,28 +1,31 @@
+const source = require("rfr");
+const MarkdownIt = require("markdown-it");
+
+const md = new MarkdownIt();
+const { getEdu } = source("models/eduModel");
+const { getCert } = source("models/certModel");
+
 const EducationController = {
   get(req, res) {
-    res.render("education", {
-      education: [
-        {
-          title: "Title",
-          subheading: "Sub",
-          uuid: "12345",
-          content: "content"
-        },
-        {
-          title: "Title2",
-          subheading: "Sub2",
-          uuid: "23451",
-          content: "content2"
-        }
-      ],
-      certifications: [
-        {
-          name: "Cert",
-          link: "https://google.com"
-        }
-      ]
+    getEdu({}).then((foundEdus) => {
+      getCert({}).then((foundCerts) => {
+        res.render("education", {
+          education: renderBody(foundEdus),
+          certifications: foundCerts,
+        });
+      })
+    }).catch((err) => {
+      console.log(err);
+      res.redirect("/404");
     });
   }
 };
+
+function renderBody(exps) {
+  exps.forEach((exp) => {
+    exp.body = md.render(exp.body);
+  });
+  return exps;
+}
 
 module.exports = EducationController;

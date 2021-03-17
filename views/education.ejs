@@ -31,7 +31,7 @@
                 </div>
                 <div class="collapse extra-info-card" id="collapse<%= edu.uuid %>">
                     <div class="card card-body">
-                        <%= edu.content %>
+                        <%- edu.body %>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                 <h2>Certifications</h2>
                 <ul class="list-unstyled">
                     <% certifications.forEach((cert) => { %>
-                        <li class="text-center"><a href="<%= cert.link %>" target="_blank"><%= cert.name %></a></li>
+                        <li class="text-center"><a href="<%= cert.link %>" target="_blank"><%= cert.title %></a></li>
                     <% }); %>
                 </ul>
             </div>
