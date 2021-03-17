@@ -1,15 +1,13 @@
 /* Blog CSS */
-.blog-block {
+.blog-post h2 {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
     text-align: left;
+    color: black;
 }
 
-.blog-title {
-    font-size: 40px;
-    text-align: left;
-}
-
-.blog-content {
-    font-size: 18px;
+.blog-post h6 {
+    color: #686868;
 }
 
 /* Blog Post CSS */
@@ -18,8 +16,8 @@
     padding-bottom: 10px;
 }
 
-.blog-link a,
-.blog-link a:hover {
+.blog-post a,
+.blog-post a:hover {
     color: black;
     text-decoration: none;
 }

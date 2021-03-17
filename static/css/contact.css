@@ -1,58 +1,13 @@
-/* Contact Page CSS */
-h4 .contactH4 {
-    font-size: 18px;
-    padding-bottom: 1.5rem;
-    font-weight: 300;
-    color: #505050;
+#contact {
+    padding-top: 15vh;
+    font-size: 28px;
 }
 
-.contact-info-block {
-    vertical-align: middle;
+#contact .container {
+    padding-top: 5vh;
 }
 
-.contact-info-block {
-    font-family: "Lato", sans-serif;
-}
-
-.contact-info-block h2 {
-    font-size: 40px;
-    font-weight: lighter;
-}
-
-.contact-info-block h4 {
-    font-size: 18px;
-    padding-bottom: 1.5rem;
-    font-weight: 300;
-    color: #505050;
-}
-
-.contact-info-block h5 {
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: 300;
-}
-
-.contact-info-block h6 {
-    padding-top: 0;
-    padding-bottom: 1rem;
-    font-weight: 300;
-    font-size: 16px;
-    color: #505050;
-}
-
-.contact-info-block h6 a,
-.contact-info-block h6 a:hover,
-.contact-info-block h6 a:visited {
+#contact .container a {
     color: black;
     text-decoration: none;
-}
-
-.contact-info {
-    vertical-align: top;
-}
-
-.contact-icons {
-    padding-top: 5%;
-    display: flex;
-    justify-content: space-evenly;
 }

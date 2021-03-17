@@ -1,34 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <%- include('partials/header'); -%>
 <body>
-<%- include('partials/navbar.ejs'); -%>
-<main role="main">
-    <div class="gap major-gap">
-    </div>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Delete Blog Post</h1>
 
-    <div class="cat-header">
-        <h1>Delete Blog Post</h1>
-    </div>
-
-    <div class="container" style="padding-top: 0">
-        <form action="/blog/<%= renderURL %>/delete" method="post">
-            <div class="form-group">
-                <label for="editTitle" style="width: 100%">Title
-                    <input class="form-control" type="text" name="editTitle" value="<%= title %>" readonly>
-                </label>
-                <label for="editDate" style="width: 100%">Date
-                    <input class="form-control" type="text" name="editDate" value="<%= date %>" readonly>
-                </label>
-                <label for="editDescription" style="width: 100%">Description
-                    <textarea class="form-control" name="editDescription" rows="3"
-                              readonly><%= description %></textarea>
-                </label>
-                <label for="editBody" style="width: 100%">Body
-                    <textarea class="form-control" name="editBody" rows="8" cols="80" readonly><%= body %></textarea>
-                </label>
+            <div class="container">
+                <form action="/blog/<%= renderURL %>/delete" method="post">
+                    <div class="form-group">
+                        <label for="editTitle">Title
+                            <input class="form-control" type="text" name="editTitle" value="<%= title %>" readonly>
+                        </label>
+                        <label for="editDate">Date
+                            <input class="form-control" type="text" name="editDate" value="<%= date %>" readonly>
+                        </label>
+                        <label for="editDescription">Description
+                            <textarea class="form-control" name="editDescription" rows="3"
+                                      readonly><%= description %></textarea>
+                        </label>
+                        <label for="editBody">Body
+                            <textarea class="form-control" name="editBody" rows="8" cols="80"
+                                      readonly><%= body %></textarea>
+                        </label>
+                    </div>
+                    <div class="submit-btn">
+                        <button class="btn btn-secondary" type="submit" name="button">Delete Post</button>
+                    </div>
+                </form>
             </div>
-            <button class="btn btn-secondary" type="submit" name="button">Delete Post</button>
-        </form>
-    </div>
-</main>
+        </div>
+    </main>
+</div>
 </body>
 <%- include('partials/footer'); -%>
+</html>

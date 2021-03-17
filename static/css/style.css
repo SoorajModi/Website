@@ -14,6 +14,24 @@ body {
     width: 100%;
 }
 
+pre {
+    background: #BEBEBE;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+code {
+    background: #BEBEBE;
+    color: black;
+}
+
+label {
+    width: 100%;
+    padding-top: 2vh;
+}
+
 .container {
     margin-left: 0;
     margin-right: 0;
@@ -26,6 +44,7 @@ body {
     padding-left: 10vh;
     padding-right: 10vh;
     padding-bottom: 5vh;
+    min-height: 100vh;
 }
 
 .main-header h1 {
@@ -42,6 +61,19 @@ body {
 
 .arrow-btn {
     padding-top: 25px;
+}
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 1000px;
+    width: 100%;
+    overflow: scroll;
+}
+
+.submit-btn {
+    padding-top: 2vh;
+    align-content: center;
 }
 
 @media screen and (max-width: 800px) {

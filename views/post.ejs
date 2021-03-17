@@ -1,12 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <%- include('partials/header'); -%>
 <body>
-<%- include('partials/navbar.ejs'); -%>
-<main role="main">
-    <div class="container">
-        <h2 class="post-title"><%= title %></h2>
-        <h6><%= date %></h6>
-        <%- body %>
-    </div>
-</main>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header blog-post">
+            <h2 class="post-title"><%= title %></h2>
+            <h6><%= date %></h6>
+            <%- body %>
+        </div>
+    </main>
+</div>
 </body>
 <%- include('partials/footer'); -%>
+</html>
