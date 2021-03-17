@@ -11,9 +11,10 @@ const BlogController = source('controllers/blogController');
 const NotFoundController = source('controllers/notFoundController');
 const LoginController = source('controllers/adminControllers/loginController');
 const LogoutController = source('controllers/adminControllers/logoutController');
-const ComposeController = source('controllers/adminControllers/composeController');
+const ComposePostController = source('controllers/adminControllers/composePostController');
 const EditController = source('controllers/adminControllers/editController');
 const DeleteController = source('controllers/adminControllers/deleteController');
+const ComposeExpController = source('controllers/adminControllers/composeExpController');
 
 const router = express();
 
@@ -31,14 +32,17 @@ router.post('/login', LoginController.post);
 
 router.get('/logout', LogoutController.get);
 
-router.get('/blog/compose', ComposeController.get);
-router.post('/blog/compose', ComposeController.post);
+router.get('/blog/compose', ComposePostController.get);
+router.post('/blog/compose', ComposePostController.post);
 
 router.get('/blog/:post/edit', EditController.get);
 router.post('/blog/:post/edit', EditController.post);
 
 router.get('/blog/:post/delete', DeleteController.get);
 router.post('/blog/:post/delete', DeleteController.post);
+
+router.get('/experience/compose', ComposeExpController.get);
+router.post('/experience/compose', ComposeExpController.post);
 
 router.get('/blog/:post', BlogController.getPost);  // Must be below /blog/compose route
 

@@ -1,13 +1,10 @@
 const source = require("rfr");
-const MarkdownIt = require("markdown-it");
 const { createPost } = source("models/blogModel");
 
-const ComposeController = {
+const ComposePostController = {
   get: function(req, res) {
     if (req.isAuthenticated()) {
-      res.render("compose", {
-        markdown: MarkdownIt
-      });
+      res.render("composePost");
     } else {
       res.redirect("/404");
     }
@@ -21,4 +18,4 @@ const ComposeController = {
   }
 };
 
-module.exports = ComposeController;
+module.exports = ComposePostController;
