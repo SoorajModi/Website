@@ -15,6 +15,7 @@ const ComposePostController = source('controllers/adminControllers/composePostCo
 const EditController = source('controllers/adminControllers/editController');
 const DeleteController = source('controllers/adminControllers/deleteController');
 const ComposeExpController = source('controllers/adminControllers/composeExpController');
+const ComposeSkillController = source('controllers/adminControllers/composeSkillController');
 const ComposeVolController = source('controllers/adminControllers/composeVolController');
 const ComposeEduController = source('controllers/adminControllers/composeEduController');
 const ComposeCertController = source('controllers/adminControllers/composeCertController');
@@ -46,6 +47,9 @@ router.post('/blog/:post/delete', DeleteController.post);
 
 router.get('/experience/compose', ComposeExpController.get);
 router.post('/experience/compose', ComposeExpController.post);
+
+router.get('/experience/skill/compose', ComposeSkillController.get);
+router.post('/experience/skill/compose', ComposeSkillController.post);
 
 router.get('/volunteering/compose', ComposeVolController.get);
 router.post('/volunteering/compose', ComposeVolController.post);
