@@ -1,10 +1,10 @@
 const source = require("rfr");
-const { createExp } = source("models/experienceModel");
+const { createVol } = source("models/volModel");
 
-const ComposeExpController = {
+const ComposeVolController = {
   get: function(req, res) {
     if (req.isAuthenticated()) {
-      res.render("composeExp");
+      res.render("composeVol");
     } else {
       res.redirect("/404");
     }
@@ -12,10 +12,10 @@ const ComposeExpController = {
 
   post: function(req, res) {
     if (req.isAuthenticated()) {
-      createExp(req);
-      res.redirect("/experience");
+      createVol(req);
+      res.redirect("/volunteering");
     }
   }
 };
 
-module.exports = ComposeExpController;
+module.exports = ComposeVolController;

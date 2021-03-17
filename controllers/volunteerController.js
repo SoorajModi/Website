@@ -1,22 +1,28 @@
+const source = require("rfr");
+const MarkdownIt = require("markdown-it");
+
+const md = new MarkdownIt();
+const { getVol } = source("models/volModel");
+
 const VolunteerController = {
   get(req, res) {
-    res.render("volunteering", {
-      volunteering: [
-        {
-          title: "Title",
-          subheading: "Sub",
-          uuid: "12345",
-          content: "content"
-        },
-        {
-          title: "Title2",
-          subheading: "Sub2",
-          uuid: "23451",
-          content: "content2"
-        }
-      ]
+    getVol({}).then((foundVols) => {
+      res.render("volunteering", {
+        volunteering: renderBody(foundVols)
+      });
+    }).catch((err) => {
+      console.log(err);
+      res.redirect("/404");
     });
   }
 };
+
+function renderBody(exps) {
+  console.log(exps);
+  exps.forEach((exp) => {
+    exp.body = md.render(exp.body);
+  });
+  return exps;
+}
 
 module.exports = VolunteerController;
