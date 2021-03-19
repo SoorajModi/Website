@@ -1,0 +1,23 @@
+/* Blog CSS */
+.blog-post h2 {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    text-align: left;
+    color: black;
+}
+
+.blog-post h6 {
+    color: #686868;
+}
+
+/* Blog Post CSS */
+.post-title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.blog-post a,
+.blog-post a:hover {
+    color: black;
+    text-decoration: none;
+}

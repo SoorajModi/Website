@@ -1,124 +1,59 @@
-<%- include('partials/header.ejs') -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('partials/header'); -%>
 <body>
-<%- include('partials/navbar.ejs') -%>
-<main role="main">
-    <!-- Add gap for visual space -->
-    <div class="gap major-gap" style="background-image: url('images/education.jpg');">
-    </div>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Education</h1>
 
-    <div class="cat-header">
-        <h1>Education</h1>
-    </div>
+            <h2>
+                I consider myself a life long learner and continual learning is a core element of software development.
+                This section showcases my formal degrees and certifications, but I also learn from a variety of
+                sources including YouTube, online tutorials, and more.
+            </h2>
 
-    <!-- Bachelor of Computing Portion -->
-    <div class="container">
-        <hr>
+            <% education.forEach((edu) => { %>
+                <hr>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h2><%= edu.title %></h2>
+                            <h6><%= edu.subheading %></h6>
+                        </div>
+                        <% if (edu.body) { %>
+                            <div class="col-1 arrow-btn">
+                                <a class="expand-btn center" data-toggle="collapse"
+                                   data-target="#collapse<%= edu.uuid %>"
+                                   aria-expanded="false" aria-controls="collapse<%= edu.uuid %>">
+                                    <i class="animate-icon fa fa-chevron-left" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="collapse extra-info-card" id="collapse<%= edu.uuid %>">
+                    <div class="card card-body">
+                        <%- edu.body %>
+                    </div>
+                </div>
 
-        <div class="row">
-            <div class="container divider text-center">
-                <h2><a class="cat-link" href="https://admission.uoguelph.ca/bcomp" target="_blank">Bachelor of
-                        Computing</a></h2>
-                <h6>
-                    <a class="cat-link" href="https://www.uoguelph.ca/" target="_blank">University of Guelph</a>
-                </h6>
-                <p>I chose to take my undergraduate degree at the University of Guelph in Honours Computer Science
-                    with a minor in History. I loved my time at Guelph, including the environment, sense of
-                    community, culture, and the experience was incredibly influential on my development as both a
-                    person and a professional.</p>
-                <a class="expand-btn center" data-toggle="collapse" data-target="#collapseGuelph"
-                   aria-expanded="false" aria-controls="collapseGuelph">
-                    <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <div class="collapse extra-info-card" id="collapseGuelph">
-            <div class="card card-body">
-                <h6>2016-2021</h6>
-                <ul>
-                    <li>Majored in Honours Computer Science</li>
-                    <li>Minored in History</li>
-                    <li>Completed courses including:
-                        <ul>
-                            <li>Data Structures in Computing</li>
-                            <li>Object Oriented Programming</li>
-                            <li>Software Systems</li>
-                            <li>Development and Integration</li>
-                            <li>Operating Systems</li>
-                            <li>Analysis and Design of Computing Algorithms</li>
-                            <li>Legacy Systems</li>
-                            <li>Social Implications of Computing</li>
-                            <li>Data Science</li>
-                        </ul>
-                    </li>
-                    <li>Currently completing courses including; Mobile Computing and Software Engineering.</li>
-                </ul>
-            </div>
-        </div>
+            <% }); %>
 
-        <hr>
+            <hr>
 
-        <div class="row">
-            <div class="container divider text-center">
-                <h2><a class="cat-link" href="https://www.ibo.org/" target="_blank">International Baccalaureate
-                        Diploma (IB)</a></h2>
-                <h6>Cameron Heights Collegiate Institute</h6>
-                <p>In addition to my OSSD, I was also enrolled in the IB program. An international program designed
-                    to develop students who will build a better world through intercultural understanding and
-                    respect.</p>
-                <a class="expand-btn center" data-toggle="collapse" data-target="#collapseIB" aria-expanded="false"
-                   aria-controls="collapseIB">
-                    <i class="animate-icon fa fa-chevron-up" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <div class="collapse extra-info-card" id="collapseIB">
-            <div class="card card-body">
-                <h6>2012-2016</h6>
-                <ul>
-                    <li>Critical thinking and challenge assumptions.</li>
-                    <li>Develop independently of government and national systems, incorporating quality practice
-                        from research and our global community of schools.
-                    </li>
-                    <li>Learn to consider both local and global contexts.</li>
-                    <li>Develop research skills proven to help in higher education.</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row">
-            <div class="container divider text-center">
-                <h2>Ontario Secondary School Diploma (OSSD)</h2>
-                <h6>Cameron Heights Collegiate Institute</h6>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- Other skills and Certifications portion -->
-        <div class="row">
-            <div class="col-md-12 col-sm-12" style="text-align:center;">
-                <h2>Other Certifications and Skills</h2>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-12">
+            <div class="cat-list">
+                <h2>Certifications</h2>
                 <ul class="list-unstyled">
-                    <li><a href="https://legacy.livingworks.net/programs/safetalk/" target="_blank">
-                            safeTALK Training</a></li>
-                    <li><a href="https://www.udemy.com/certificate/UC-d3bf8fa0-b1ad-483f-98e1-3dd0b26dc9eb/"
-                           target="_blank">
-                            The Complete 2020 Web Development Bootcamp</a>
-                    </li>
-                    <li><a href="https://www.udemy.com/certificate/UC-d7c550aa-6cb4-4038-9256-8dcad9eee032/"
-                           target="_blank">
-                            Getting Started with TypeScript</a>
-                    </li>
+                    <% certifications.forEach((cert) => { %>
+                        <li class="text-center"><a href="<%= cert.link %>" target="_blank"><%= cert.title %></a></li>
+                    <% }); %>
                 </ul>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 </body>
-<%- include('partials/footer.ejs') -%>
+<%- include('partials/footer'); -%>
+</html>

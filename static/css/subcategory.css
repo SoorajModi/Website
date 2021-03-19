@@ -3,15 +3,27 @@
     outline: none;
 }
 
+.extra-info-card {
+    padding-top: 1rem;
+}
+
 .extra-info-card .card {
     background-color: #f8f8f8;
-    padding-top: auto;
-    padding-bottom: auto;
-    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.extra-info-card .card p,  .extra-info-card .card ul, .extra-info-card .card li {
+    background-color: #f8f8f8;
 }
 
 .no-bullet {
     list-style: none;
+}
+
+.cat-header {
+    text-align: left;
 }
 
 .cat-header h1 {
@@ -19,6 +31,28 @@
     font-size: 60px;
     font-weight: 400;
     padding-top: 4%;
+}
+
+.cat-header h2 {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    color: black;
+}
+
+.cat-header h6 {
+    text-align: left;
+}
+
+.cat-header p {
+    text-align: left;
+}
+
+.cat-list h2 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    color: black;
 }
 
 .cat-link:link,

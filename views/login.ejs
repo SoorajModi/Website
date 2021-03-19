@@ -1,28 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <%- include('partials/header'); -%>
 <body>
-<%- include('partials/navbar.ejs'); -%>
-<main role="main">
-    <div class="cat-header">
-        <h1>Sign In</h1>
-    </div>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Login</h1>
 
-    <div class="container" style="padding-top: 0">
-        <div class="row">
-            <div class="col-sm-12">
-                <form action="/login" method="post">
-                    <div class="form-group">
-                        <label for="username" style="width: 100%">Username
-                            <input class="form-control" type="text" name="username">
-                        </label>
-                        <label for="password" style="width: 100%">Password
-                            <input type="password" class="form-control" name="password">
-                        </label>
-                    </div>
-                    <button class="btn btn-secondary" type="submit" name="button" style="alignment: center">Sign In</button>
-                </form>
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <label for="username">Username
+                                <input class="form-control" type="text" name="username">
+                            </label>
+                            <label for="password">Password
+                                <input type="password" class="form-control" name="password">
+                            </label>
+                        </div>
+                        <div class="submit-btn">
+                            <button class="btn btn-secondary" type="submit" name="button">
+                                Sign In
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 </body>
 <%- include('partials/footer'); -%>
+</html>

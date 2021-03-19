@@ -1,28 +1,27 @@
-<%- include('partials/header.ejs'); -%>
-  <body>
-    <%- include('partials/navbar.ejs'); -%>
-    <main role="main">
-      <!-- Embed Resume -->
-      <div class="container">
-        <div class='embed-responsive'>
-          <object data="/docs/ResumeDec2020.pdf" type="application/pdf">
-            <p>It appears you don't have a PDF plugin for this browser. No biggie... you can
-              <a href="/docs/ResumeDec2020.pdf" style="color:black">click here to download the PDF file.</a>
-            </p>
-          </object>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('partials/header'); -%>
+<body>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Resume</h1>
 
-      <!-- Embed CV -->
-<!--      <div class="container">-->
-<!--        <div class='embed-responsive'>-->
-<!--          <object data="/docs/SoorajModiCV.pdf" type="application/pdf">-->
-<!--            <p>It appears you don't have a PDF plugin for this browser. No biggie... you can-->
-<!--              <a href="/docs/SoorajModiCV.pdf" style="color:black">click here to download the PDF file.</a>-->
-<!--            </p>-->
-<!--          </object>-->
-<!--        </div>-->
-<!--      </div>-->
+            <div style="padding-top: 5vh">
+                <div class='embed-responsive'>
+                    <object data="/docs/ResumeDec2020.pdf" type="application/pdf" style="width: 100%; height: 100%;">
+                        <p>It appears you don't have a PDF plugin for this browser. No biggie... you can
+                            <a href="/docs/ResumeDec2020.pdf" style="color:black">click here to download the PDF
+                                file.</a>
+                        </p>
+                    </object>
+                </div>
+            </div>
+        </div>
     </main>
-  </body>
-<%- include('partials/footer.ejs'); -%>
+</div>
+</body>
+<%- include('partials/footer'); -%>
+</html>
+

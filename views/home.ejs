@@ -1,89 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <%- include('partials/header'); -%>
 <body>
-<%- include('partials/navbar'); -%>
-
-<!-- Main content of website -->
-<main role="main">
-
-    <!-- Add gap for visual space -->
-    <div class="home-header">
-    </div>
-
-    <!-- Main portion of website -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <img src="images/profile.jpg" class="img-fluid" alt="Sooraj Modi Profile Picture"
-                     style="border-radius:8px;">
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="home-main">
+            <h1>Sooraj Modi</h1>
+            <h2>A little bit about me...</h2>
+            <p>
+                Hello! My name is Sooraj Modi and I am a passionate software developer currently completing my
+                Bachelor's degree in Honours Computer Science with a History minor at the University of Guelph. I love
+                taking on new challenges, working on fun projects that help improve our world, and learning new things!
+                My time in University, working on personal projects, and professional opportunities, have allowed me to
+                grow as a person and develop essential real world skills I hope to apply towards future opportunities.
+            </p>
+            <p>
+                A proven leader with creative problem solving skills, I strive to challenge the status quo and
+                continually improve myself and the things around me. I am always looking for opportunities to improve
+                and grow as a person, professional, leader, and teammate. This website showcases some of my most
+                influential experiences that helped me grow into the person I am today.
+            <p>
+                You can find my contact information <a href="/contact">here</a>. Feel free to get in touch with me. I am
+                always open to discussing new projects, creative ideas or opportunities to be a part of your vision.
+            </p>
+            <div class="home-sub-header">
+                <h2>Some of the things I've worked on...</h2>
+                <p>
+                    I love programming, and over my career I have worked on numerous software projects. These projects
+                    have taught so much about software development, project management, agile development, how to
+                    collaborate with other developers, and creating robust, scalable, and manageable applications.
+                </p>
+                <p>
+                    Through my professional opportunities I got to work with a numerous teams and technologies. My first
+                    opportunity came with an Internet of Things (IoT) team developing a SmartCity platform. This
+                    provided me invaluable experience working with Javascript, Node, Express, TDD, REST APIs, and more.
+                    I was also a member of a Java development team working to improve the performance of Bell's MMS
+                    service.
+                </p>
+                <p>
+                    My personal projects have also allowed me to grow as a developer. I have used a multitude of
+                    languages including Javascript, Typescript, Java, Kotlin, C, C++, Python, Elixir, Ruby, React,
+                    Angular, and more. Some of the projects I am most proud of include <a
+                            href="https://soorajmodi.com/blog/Botomir"
+                            target="_blank">Botomir</a> a Discord Bot,
+                    <a href="https://www.soorajmodi.com/blog/chicago-manual-of-style" target="_blank">Chicago Manual of
+                        Style</a> citation library, <a>Citation Bot</a> a citation generator, and a few <a
+                            href="https://github.com/SoorajModi/DataStructures">Data Structures</a> written in C.
+                </p>
             </div>
-            <div class="col-md-9 col-sm-6 about-padding">
-                <p>Hello! My name is Sooraj Modi and I am a passionate software developer currently completing my
-                    Bachelor's degree in Honours Computer Science with a History minor at the University of Guelph. My
-                    time in University has allowed my to grow as a person and develop essential real world skills I hope
-                    to apply towards future opportunities.</p>
-                <p>I am a proven leader with creative problem solving skills. I am always looking
-                    for opportunities to improve and grow as a person, professional, leader and teammate. This website
-                    showcases some of my most influential experiences that help me grow into the person I am today. </p>
-                <p>Feel free to <a class="reach-out-link" href="/contact">reach out to me</a> for questions or inquiries.</p>
+            <div class="home-sub-header">
+                <h2>Other things I've worked on...</h2>
+                <p>
+                    Beyond coding it is also important for me to me a member of my community and actively engaged with
+                    opportunities around me. These have allowed to to develop essential skills outside of the technical
+                    realm such as leadership, communication. problem solving, patience, initiative, and empathy.
+                </p>
+                <p>
+                    These opportunities include being the President of the <a href="https://socis.ca">Society of
+                        Computing and Information Sciences</a>, the Co-Chair of Student Senate Caucus, a Director for
+                    the Central Student Association, the Director of Events for the Guelph Coding Community, a member of
+                    Jack.org, and more. I loved all of these experiences in some way because they allowed me to have an
+                    impact on the community, made the world a little bit better, and really gave me the chance to grow
+                    as an individual beyond just a developer. They have been invaluable, and I taught me lessons I
+                    will take with me into the future.
+                </p>
+            </div>
+            <div class="home-sub-header">
+                <h2>What I love about programming...</h2>
+                <p>
+                    Programming isn't just a profession for me. It's a passion, hobby, craft, and so much more. Although
+                    there are times it gets frustrating, I find it incredibly rewarding. I consider myself a lifelong
+                    learner and software development has more to learn than I could ever ask for. It feels whenever I
+                    sit down and code, I pickup something new like a design pattern, tool, language, or something else.
+                </p>
+                <p>
+                    I like to describe programming like playing with Lego. You gradually learn about the different
+                    pieces, elements of an applications, and how they interact and work together. Eventually you can
+                    put together a castle, car, an airplane, or anything you can imagine. Programming is similar, you
+                    learn about the different pieces, the language, the framework, the different parts of a software
+                    system like the frontend, backend, database, testing, and once you put it together, you can build
+                    something amazing.
+                </p>
+            </div>
+            <div class="home-sub-header">
+                <h2>My life outside of coding...</h2>
+                <p>
+                    Although I'm a bit of a dork, I do have a life outside of coding.
+                </p>
+                <p>
+                    First, I love playing sports and being active. My favourite sport is Hockey, I played for about 7
+                    years and absolutely love the sport. I also watch a lot of NHL games, my favourite teams are the
+                    Edmonton Oilers and Toronto Maple Leafs. Further, I also love Basketball. I am a huge Raptors fan
+                    and occasionally play every now and then.
+                </p>
+                <p>
+                    Beyond sports, I really love building mechanical keyboards. The engineering, the customizations you
+                    can make, and the little details that go into them makes it thrilling. My career is based around
+                    typing on a keyboard, so its nice to have something fun and clicky to work on.
+                </p>
+                <p>
+                    Further, I really love trying new foods, in fact, I'm willing to try anything once. A big fan of hot
+                    sauce and spicy food in general. Love music anc going to concerts, festivals, or just jamming out
+                    with a group of friends. I could go on and on about my hobbies, but feel free to reach out if you're
+                    wondering more about them or about me in general.
+                </p>
             </div>
         </div>
-    </div>
-
-    <!-- Add smaller gap for visual space -->
-    <div class="gap minor-gap">
-    </div>
-
-    <div class="container">
-        <!-- Description of subcategories -->
-        <div class="row">
-            <div class="col-md-4 col-sm-1 text-center">
-                <h2>Experience</h2>
-                <p>Take a look at my previous work experience. I have worked at an assortment of workplaces ranging
-                    from start ups to larger companies. These experiences have allowed me to apply the skills I've
-                    developed to real world applications and grow as a professional.</p>
-                <p><a class="home-btn" href="/experience" role="button">Read More</a></p>
-            </div>
-            <div class="col-md-4 text-center">
-                <h2>Education</h2>
-                <p>This section showcases some of the degrees and certificates I have earned. School has given me a
-                    plethora of opportunities to develop a strong foundation of skills I can use in the workplace and
-                    beyond. The opportunities allowed me to grow into a stronger, more capable individual.</p>
-                <a class="home-btn" href="/education" role="button">Read More</a>
-            </div>
-            <div class="col-md-4 text-center">
-                <h2>Volunteering</h2>
-                <p>I am an engaged and active member of the community. Throughout my time at University I have
-                    volunteered for various positions and clubs that has allowed me to make a lasting impact and
-                    provided unique experiential learning opportunities and skills.</p>
-                <a class="home-btn" href="/volunteering" role="button">Read More</a>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- List of Key Skills -->
-        <div class="skills">
-            <h2>Key Skills</h2>
-            <div class="row">
-                <div class="col-sm-6 left">
-                    <ul class="list-unstyled">
-                        <li>C</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 right">
-                    <ul class="list-unstyled">
-                        <li>Web Development</li>
-                        <li>Backend Development</li>
-                        <li>Data Science</li>
-                        <li>React.js</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
+    </main>
+</div>
 </body>
 <%- include('partials/footer'); -%>
+</html>

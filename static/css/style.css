@@ -1,66 +1,71 @@
-/* CSS shared across webpages */
-body,
-p,
-h1,
-h2,
-h3,
-h4,
-li {
+* {
     font-family: "Lato", sans-serif;
+    background-color: #F5F5F5;
 }
 
-/* Format code blocks */
-pre code {
-    background-color: #eee;
-    border: 1px solid #999;
-    display: block;
-    padding: 20px;
+html {
+    height: 100%;
+    width: 100%;
+    padding:0;
 }
 
-/* Set default colors of links*/
-p a,
-p a:hover {
+body {
+    height: 100%;
+    width: 100%;
+}
+
+pre {
+    background: #BEBEBE;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+code {
+    background: #BEBEBE;
     color: black;
 }
 
-/* Increase padding for containers */
-.container {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-}
-
-.divider {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* CSS for gaps on webpage */
-.gap {
-    padding-top: 3.5rem;
-    padding-bottom: 5rem;
-    background-image: url("../images/gap_main.jpeg"); /* Default image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 500px; /* Height of the gap */
+label {
     width: 100%;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    background-attachment: fixed;
+    padding-top: 2vh;
 }
 
-.minor-gap {
-    height: 150px;
-    background-image: url("../images/gap_main.jpeg");
+a, a:hover {
+    color: black;
+    text-decoration: none;
 }
 
-.major-gap {
-    height: 700px;
+.container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    max-width: 100%;
 }
 
-.image {
-    vertical-align: center;
-    background-blend-mode: multiply;
-    max-height: 250px;
+.main-header {
+    margin-left: 300px;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    padding-bottom: 5vh;
+    min-height: 100vh;
+}
+
+.main-header h1 {
+    padding-top: 15vh;
+    font-size: 96px;
+}
+
+.main-header h2 {
+    padding-top: 45vh;
+    font-size: 40px;
+    padding-bottom: 10vh;
+    color: #686868;
+}
+
+.arrow-btn {
+    padding-top: 20px;
 }
 
 .embed-responsive {
@@ -71,7 +76,15 @@ p a:hover {
     overflow: scroll;
 }
 
-.left,
-.right {
-    padding: 0;
+.submit-btn {
+    padding-top: 2vh;
+    align-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .main-header {
+        margin-left: 150px;
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
 }
