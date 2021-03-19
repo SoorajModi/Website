@@ -5,8 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const certScheme = new Schema({
   title: String,
-  subheading: String,
-  body: String,
+  link: String,
   date: { type: Date, default: Date.now },
   uuid: String
 });
