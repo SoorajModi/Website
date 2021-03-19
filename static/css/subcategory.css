@@ -3,11 +3,19 @@
     outline: none;
 }
 
+.extra-info-card {
+    padding-top: 1rem;
+}
+
 .extra-info-card .card {
     background-color: #f8f8f8;
-    padding-top: auto;
-    padding-bottom: auto;
-    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.extra-info-card .card p,  .extra-info-card .card ul, .extra-info-card .card li {
+    background-color: #f8f8f8;
 }
 
 .no-bullet {

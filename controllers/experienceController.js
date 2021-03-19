@@ -9,10 +9,12 @@ const ExperienceController = {
   get(req, res) {
     getExp({}).then((foundExps) => {
       getSkill({}).then((foundSkills) => {
+        const skills = splitList(foundSkills);
+        console.log(skills);
         res.render("experience", {
           experiences: renderBody(foundExps),
-          skillsLeft: foundSkills,
-          skillsRight: foundSkills
+          skillsLeft: skills.skillsLeft,
+          skillsRight: skills.skillsRight
         });
       });
     }).catch((err) => {
@@ -23,12 +25,18 @@ const ExperienceController = {
 };
 
 function renderBody(exps) {
-  console.log(exps);
   exps.forEach((exp) => {
     exp.body = md.render(exp.body);
   });
-  console.log(exps);
   return exps;
+}
+
+function splitList(list) {
+  const half = Math.ceil(list.length / 2);
+  return {
+    skillsLeft: list.splice(0, half),
+    skillsRight: list.splice(-half)
+  };
 }
 
 module.exports = ExperienceController;

@@ -18,7 +18,6 @@ const VolunteerController = {
 };
 
 function renderBody(exps) {
-  console.log(exps);
   exps.forEach((exp) => {
     exp.body = md.render(exp.body);
   });

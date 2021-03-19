@@ -8,9 +8,10 @@
         <div class="main-header">
             <h1>Blog</h1>
 
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            <h2>
+                This is my blog where I write about things that range from programming projects,
+                my hobbies, things that I have been a apart of, and everything in between. At times it can seem like
+                the ramblings of a madman, but there is a method to my madness.
             </h2>
 
             <% blog.forEach((post) => { %>
@@ -18,8 +19,8 @@
                 <div class="card border-0 blog-block">
                     <div class="card-body">
                         <h5 class="card-title blog-title"><%= post.title %></h5>
-                        <h6><%= post.date %></h6>
-                        <p class="blog-content"><%= post.body.substring(0, 600) + "..." %>><a
+                        <h6><%= post.date.toLocaleDateString("en-US", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></h6>
+                        <p class="blog-content"><%= post.body.substring(0, 600) + "..." %><a
                                     href="/blog/<%= post.url %>">Read more</a></p>
                     </div>
                 </div>

@@ -8,9 +8,10 @@
         <div class="main-header">
             <h1>Education</h1>
 
-            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            <h2>
+                I consider myself a life long learner and continual learning is a core element of software development.
+                This section showcases my formal degrees and certifications, but I also learn from a variety of
+                sources including YouTube, online tutorials, and more.
             </h2>
 
             <% education.forEach((edu) => { %>
@@ -21,12 +22,15 @@
                             <h2><%= edu.title %></h2>
                             <h6><%= edu.subheading %></h6>
                         </div>
-                        <div class="col-1 arrow-btn">
-                            <a class="expand-btn center" data-toggle="collapse" data-target="#collapse<%= edu.uuid %>"
-                               aria-expanded="false" aria-controls="collapse<%= edu.uuid %>">
-                                <i class="animate-icon fa fa-chevron-left" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                        <% if (edu.body) { %>
+                            <div class="col-1 arrow-btn">
+                                <a class="expand-btn center" data-toggle="collapse"
+                                   data-target="#collapse<%= edu.uuid %>"
+                                   aria-expanded="false" aria-controls="collapse<%= edu.uuid %>">
+                                    <i class="animate-icon fa fa-chevron-left" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        <% } %>
                     </div>
                 </div>
                 <div class="collapse extra-info-card" id="collapse<%= edu.uuid %>">

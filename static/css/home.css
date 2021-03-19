@@ -1,5 +1,5 @@
 .home-main {
-    margin-left: 350px;
+    margin-left: 300px;
     padding-left: 10vh;
     padding-right: 10vh;
     padding-bottom: 5vh;
@@ -32,8 +32,8 @@
 
 @media screen and (max-width: 800px) {
     .home-main {
-        margin-left: 200px;
-        padding-left: 5vh;
-        padding-right: 5vh;
+        margin-left: 150px;
+        padding-left: 2vh;
+        padding-right: 2vh;
     }
 }
