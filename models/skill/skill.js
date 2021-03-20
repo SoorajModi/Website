@@ -27,13 +27,6 @@ class Skill {
     return this;
   }
 
-  setUUID(uuid) {
-    if (typeof uuid === "string") {
-      this._model.uuid = uuid;
-    }
-    return this;
-  }
-
   save() {
     return this._model.save().then(() => this);
   }

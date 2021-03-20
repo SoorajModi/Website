@@ -2,8 +2,21 @@ const mongoose = require("mongoose");
 const { v4: uuidv4 } = require("uuid");
 
 const schema = new mongoose.Schema({
-  skill: {
+  title: {
     type: String,
+    required: true
+  },
+  subheading: {
+    type: String,
+    required: true
+  },
+  body: {
+    type: String,
+    required: false
+  },
+  date: {
+    type: Date,
+    default: Date.now,
     required: true
   },
   uuid: {
