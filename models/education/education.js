@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 const schema = require("./schema");
 
-const VolModel = mongoose.model("volunteers", schema);
+const EduModel = mongoose.model("educations", schema);
 
-class Volunteer {
+class Education {
   constructor() {
-    this._model = new VolModel();
+    this._model = new EduModel();
   }
 
   get title() {
@@ -54,15 +54,15 @@ class Volunteer {
   }
 
   static getAll() {
-    return VolModel.find({})
-      .then((vol) => vol.map((v) => {
-        const vol = new Volunteer();
-        vol._model = v;
-        return vol;
+    return EduModel.find({})
+      .then((edu) => edu.map((e) => {
+        const edu = new Education();
+        edu._model = e;
+        return edu;
       }));
   }
 }
 
 module.exports = {
-  Volunteer
+  Education: Education
 };

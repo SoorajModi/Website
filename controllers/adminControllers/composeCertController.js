@@ -1,5 +1,5 @@
 const source = require("rfr");
-const { createCert } = source("models/certModel");
+const { Certification } = source("models/certification");
 
 const ComposeCertController = {
   get: function(req, res) {
@@ -12,7 +12,14 @@ const ComposeCertController = {
 
   post: function(req, res) {
     if (req.isAuthenticated()) {
-      createCert(req);
+      const certification = new Certification();
+
+      certification.setTitle(req.body.composeTitle);
+      certification.setLink(req.body.composeLink);
+      certification.save()
+        .then(() => console.log("Successfully written certification to database"))
+        .catch((e) => console.log("failed to save the certification to the database", e));
+
       res.redirect("/education");
     }
   }

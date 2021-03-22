@@ -8,10 +8,6 @@ class Experience {
     this._model = new ExpModel();
   }
 
-  get _mongoId() {
-    return this._model._id;
-  }
-
   get title() {
     return this._model.title;
   }

@@ -2,18 +2,19 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { getEdu } = source("models/eduModel");
-const { getCert } = source("models/certModel");
+const { Education } = source("models/education");
+const { Certification } = source("models/certification");
 
 const EducationController = {
   get(req, res) {
-    getEdu({}).then((foundEdus) => {
-      getCert({}).then((foundCerts) => {
-        res.render("education", {
-          education: renderBody(foundEdus),
-          certifications: foundCerts,
-        });
-      })
+    Promise.all([
+      Education.getAll(), // 0
+      Certification.getAll() // 1
+    ]).then((values) => {
+      res.render("education", {
+        education: renderBody(values[0]),
+        certifications: values[1]
+      });
     }).catch((err) => {
       console.log(err);
       res.redirect("/404");

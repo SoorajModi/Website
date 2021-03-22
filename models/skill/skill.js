@@ -8,10 +8,6 @@ class Skill {
     this._model = new SkillModel();
   }
 
-  get _mongoId() {
-    return this._model._id;
-  }
-
   get skill() {
     return this._model.skill;
   }
