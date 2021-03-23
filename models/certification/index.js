@@ -1,5 +1,5 @@
-const edu = require("./certification");
+const cert = require("./certification");
 
 module.exports = {
-  Certification: edu.Certification
+  Certification: cert.Certification
 };

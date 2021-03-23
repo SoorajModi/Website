@@ -19,7 +19,7 @@ const ComposeVolController = {
       if (isStringEmpty(req.body.composeBody)) vol.setBody(req.body.composeBody);
       vol.save()
         .then(() => console.log("Successfully written volunteer to database"))
-        .catch((e) => console.log("failed to save the volunteer to the database", e));
+        .catch((e) => console.log("Failed to save the volunteer to the database", e));
 
       res.redirect("/volunteering");
     }
