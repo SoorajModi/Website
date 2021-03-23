@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Experience } = source("models/experience");
 
 const ComposeExpController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeExp");
     } else {
@@ -10,7 +11,7 @@ const ComposeExpController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const exp = new Experience();
 

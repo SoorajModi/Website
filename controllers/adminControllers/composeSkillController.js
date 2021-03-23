@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Skill } = source("models/skill");
 
 const ComposeSkillController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeSkill");
     } else {
@@ -10,7 +11,7 @@ const ComposeSkillController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const skill = new Skill();
 

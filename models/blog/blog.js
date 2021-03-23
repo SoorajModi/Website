@@ -1,57 +1,57 @@
 const mongoose = require("mongoose");
 const schema = require("./schema");
 
-const BlogModel = mongoose.model("blogposts", schema);
+const BlogModel = mongoose.model("blog", schema);
 
 class Blog {
   constructor() {
-    this._model = new BlogModel();
+    this.model = new BlogModel();
   }
 
   get title() {
-    return this._model.title;
+    return this.model.title;
   }
 
   get url() {
-    return this._model.url;
+    return this.model.url;
   }
 
   get body() {
-    return this._model.body;
+    return this.model.body;
   }
 
   get date() {
-    return this._model.date;
+    return this.model.date;
   }
 
   get uuid() {
-    return this._model.uuid;
+    return this.model.uuid;
   }
 
   setTitle(title) {
     if (typeof title === "string") {
-      this._model.title = title;
-      this._model.url = (title).replace(/\s+/g, "-").toLowerCase();
+      this.model.title = title;
+      this.model.url = (title).replace(/\s+/g, "-").toLowerCase();
     }
     return this;
   }
 
   setBody(body) {
     if (typeof body === "string") {
-      this._model.body = body;
+      this.model.body = body;
     }
     return this;
   }
 
   save() {
-    return this._model.save().then(() => this);
+    return this.model.save().then(() => this);
   }
 
   static find(filter) {
     return BlogModel.find(filter)
       .then((blogs) => blogs.map((b) => {
         const blog = new Blog();
-        blog._model = b;
+        blog.model = b;
         return blog;
       }));
   }
@@ -70,5 +70,5 @@ class Blog {
 }
 
 module.exports = {
-  Blog: Blog
+  Blog
 };

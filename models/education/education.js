@@ -5,64 +5,64 @@ const EduModel = mongoose.model("educations", schema);
 
 class Education {
   constructor() {
-    this._model = new EduModel();
+    this.model = new EduModel();
   }
 
   get title() {
-    return this._model.title;
+    return this.model.title;
   }
 
   get subheading() {
-    return this._model.subheading;
+    return this.model.subheading;
   }
 
   get body() {
-    return this._model.body;
+    return this.model.body;
   }
 
   get date() {
-    return this._model.date;
+    return this.model.date;
   }
 
   get uuid() {
-    return this._model.uuid;
+    return this.model.uuid;
   }
 
   setTitle(title) {
     if (typeof title === "string") {
-      this._model.title = title;
+      this.model.title = title;
     }
     return this;
   }
 
   setSubheading(subheading) {
     if (typeof subheading === "string") {
-      this._model.subheading = subheading;
+      this.model.subheading = subheading;
     }
     return this;
   }
 
   setBody(body) {
     if (typeof body === "string") {
-      this._model.body = body;
+      this.model.body = body;
     }
     return this;
   }
 
   save() {
-    return this._model.save().then(() => this);
+    return this.model.save().then(() => this);
   }
 
   static getAll() {
     return EduModel.find({})
-      .then((edu) => edu.map((e) => {
+      .then((education) => education.map((e) => {
         const edu = new Education();
-        edu._model = e;
+        edu.model = e;
         return edu;
       }));
   }
 }
 
 module.exports = {
-  Education: Education
+  Education
 };

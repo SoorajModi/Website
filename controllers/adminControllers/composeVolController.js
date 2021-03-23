@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Volunteer } = source("models/volunteer");
 
 const ComposeVolController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeVol");
     } else {
@@ -10,7 +11,7 @@ const ComposeVolController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const vol = new Volunteer();
 

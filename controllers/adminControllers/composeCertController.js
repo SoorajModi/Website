@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Certification } = source("models/certification");
 
 const ComposeCertController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeCert");
     } else {
@@ -10,7 +11,7 @@ const ComposeCertController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const certification = new Certification();
 

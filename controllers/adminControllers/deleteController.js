@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Blog } = source("models/blog");
 
 const DeleteController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       Promise.resolve(
         Blog.find({ url: req.params.post }) // 0
@@ -23,7 +24,7 @@ const DeleteController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       Blog.deletePost({ url: req.params.post });
       res.redirect("/blog");

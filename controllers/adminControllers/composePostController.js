@@ -1,9 +1,10 @@
 const source = require("rfr");
 const _ = require('lodash');
+
 const { Blog } = source("models/blog");
 
 const ComposePostController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composePost");
     } else {
@@ -11,7 +12,7 @@ const ComposePostController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const blog = new Blog();
 

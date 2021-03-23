@@ -1,8 +1,9 @@
 const source = require("rfr");
+
 const { Education } = source("models/education");
 
 const ComposeExpController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeEdu");
     } else {
@@ -10,7 +11,7 @@ const ComposeExpController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const edu = new Education();
 
@@ -25,5 +26,9 @@ const ComposeExpController = {
     }
   }
 };
+
+function isStringEmpty(str) {
+  return (!(!str || str.trim().isEmpty));
+}
 
 module.exports = ComposeExpController;
