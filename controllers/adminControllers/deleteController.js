@@ -1,7 +1,4 @@
 const source = require("rfr");
-const {
-  getOnePost, deletePost
-} = source("models/blogModel");
 const { Blog } = source("models/blog");
 
 const DeleteController = {
