@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Volunteer } = source("models/volunteer");
+const { Volunteer } = source("models");
 
 const ComposeVolController = {
   get(req, res) {

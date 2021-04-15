@@ -1,5 +1,3 @@
 const blog = require("./blog");
 
-module.exports = {
-  Blog: blog.Blog
-};
+module.exports = blog.Blog;

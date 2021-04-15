@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Blog } = source("models/blog");
+const { Blog } = source("models");
 
 const DeleteController = {
   get(req, res) {

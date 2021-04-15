@@ -2,8 +2,7 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { Skill } = source("models/skill");
-const { Experience } = source("models/experience");
+const { Skill, Experience } = source("models");
 
 const ExperienceController = {
   get(req, res) {

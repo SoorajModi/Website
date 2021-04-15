@@ -1,7 +1,7 @@
 const source = require("rfr");
 const _ = require("lodash");
 
-const { Blog } = source("models/blog");
+const { Blog } = source("models");
 
 const EditController = {
   get(req, res) {

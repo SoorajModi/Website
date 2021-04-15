@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Skill } = source("models/skill");
+const { Skill } = source("models");
 
 const ComposeSkillController = {
   get(req, res) {

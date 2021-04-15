@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Certification } = source("models/certification");
+const { Certification } = source("models");
 
 const ComposeCertController = {
   get(req, res) {
