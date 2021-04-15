@@ -1,8 +1,10 @@
 const source = require("rfr");
-const { createPost } = source("models/blogModel");
+const _ = require('lodash');
+
+const { Blog } = source("models/blog");
 
 const ComposePostController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composePost");
     } else {
@@ -10,9 +12,16 @@ const ComposePostController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
-      createPost(req);
+      const blog = new Blog();
+
+      blog.setTitle(_.startCase(req.body.composeTitle));
+      blog.setBody(req.body.composeBody);
+      blog.save()
+        .then(() => console.log("Successfully written blog post to database"))
+        .catch((e) => console.log("Failed to save the blog post to the database", e));
+
       res.redirect("/blog");
     }
   }

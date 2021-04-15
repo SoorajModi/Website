@@ -2,20 +2,22 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { getExp } = source("models/experienceModel");
-const { getSkill } = source("models/skillsModel");
+const { Skill } = source("models/skill");
+const { Experience } = source("models/experience");
 
 const ExperienceController = {
   get(req, res) {
-    getExp({}).then((foundExps) => {
-      getSkill({}).then((foundSkills) => {
-        const skills = splitList(foundSkills);
-        console.log(skills);
-        res.render("experience", {
-          experiences: renderBody(foundExps),
-          skillsLeft: skills.skillsLeft,
-          skillsRight: skills.skillsRight
-        });
+    Promise.all([
+      Experience.getAll(), // 0
+      Skill.getAll() // 1
+    ]).then((values) => {
+      const body = renderBody(values[0]);
+      const skills = splitList(values[1]);
+
+      res.render("experience", {
+        experiences: body,
+        skillsLeft: skills.skillsLeft,
+        skillsRight: skills.skillsRight
       });
     }).catch((err) => {
       console.log(err);

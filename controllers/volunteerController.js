@@ -2,13 +2,15 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { getVol } = source("models/volModel");
+const { Volunteer } = source("models/volunteer");
 
 const VolunteerController = {
   get(req, res) {
-    getVol({}).then((foundVols) => {
+    Promise.all([
+      Volunteer.getAll() // 0
+    ]).then((values) => {
       res.render("volunteering", {
-        volunteering: renderBody(foundVols)
+        volunteering: renderBody(values[0])
       });
     }).catch((err) => {
       console.log(err);
@@ -19,7 +21,7 @@ const VolunteerController = {
 
 function renderBody(exps) {
   exps.forEach((exp) => {
-    exp.body = md.render(exp.body);
+    if (exp.body) exp.body = md.render(exp.body);
   });
   return exps;
 }

@@ -9,12 +9,15 @@
             <h1>Edit Post</h1>
 
             <div class="container" style="padding-top: 0">
-                <form action="/blog/<%= url %>/edit" method="post">
+                <form action="/experience/<%= uuid %>/edit" method="post">
                     <div class="form-group">
                         <label for="editTitle">Title
                             <input class="form-control" type="text" name="editTitle" value="<%= title %>">
                         </label>
                         <label for="editDate">Date
+                            <input class="form-control" type="text" name="editDate" value="<%= date %>">
+                        </label>
+                        <label for="editDate">Subheading
                             <input class="form-control" type="text" name="editDate" value="<%= date %>">
                         </label>
                         <label for="editBody">Body

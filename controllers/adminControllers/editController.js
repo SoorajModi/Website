@@ -1,37 +1,36 @@
 const source = require("rfr");
-const {
-  getOnePost, updatePost
-} = source("models/blogModel");
-const _ = require('lodash');
+const _ = require("lodash");
+
+const { Blog } = source("models/blog");
 
 const EditController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
-      getOnePost({ url: req.params.post })
-        .then((foundPost) => {
-          res.render("editPost", {
-            url: foundPost.url,
-            title: foundPost.title,
-            date: foundPost.date,
-            description: foundPost.description,
-            body: foundPost.body
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-          res.redirect("/404");
+      Promise.resolve(
+        Blog.find({ url: req.params.post }) // 0
+      ).then((values) => {
+        const foundPost = values[0];
+        res.render("editPost", {
+          url: foundPost.url,
+          title: foundPost.title,
+          date: foundPost.date,
+          body: foundPost.body
         });
+      }).catch((err) => {
+        console.log(err);
+        res.redirect("/404");
+      });
     } else {
       res.redirect("/404");
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
       const newTitle = _.startCase(req.body.editTitle);
       const newURL = (req.body.editTitle).replace(/\s+/g, "-").toLowerCase();
 
-      updatePost({ url: req.params.post }, {
+      Blog.update({ url: req.params.post }, {
         title: newTitle,
         description: req.body.editDescription,
         body: req.body.editBody,

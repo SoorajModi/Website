@@ -7,7 +7,8 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const passport = require("passport");
 const router = source("routes");
-source("models/userModel");    // Load model
+// source("models/userModel");    // Load model
+source("models/admin");
 
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,

@@ -1,8 +1,9 @@
 const source = require("rfr");
-const { createVol } = source("models/volModel");
+
+const { Volunteer } = source("models/volunteer");
 
 const ComposeVolController = {
-  get: function(req, res) {
+  get(req, res) {
     if (req.isAuthenticated()) {
       res.render("composeVol");
     } else {
@@ -10,12 +11,24 @@ const ComposeVolController = {
     }
   },
 
-  post: function(req, res) {
+  post(req, res) {
     if (req.isAuthenticated()) {
-      createVol(req);
+      const vol = new Volunteer();
+
+      vol.setTitle(req.body.composeTitle);
+      vol.setSubheading(req.body.composeSubheading);
+      if (isStringEmpty(req.body.composeBody)) vol.setBody(req.body.composeBody);
+      vol.save()
+        .then(() => console.log("Successfully written volunteer to database"))
+        .catch((e) => console.log("Failed to save the volunteer to the database", e));
+
       res.redirect("/volunteering");
     }
   }
 };
+
+function isStringEmpty(str) {
+  return (!(!str || str.trim().isEmpty));
+}
 
 module.exports = ComposeVolController;
