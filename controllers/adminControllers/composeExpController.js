@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Experience } = source("models/experience");
+const { Experience } = source("models");
 
 const ComposeExpController = {
   get(req, res) {

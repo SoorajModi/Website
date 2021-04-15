@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const schema = require("./schema");
 
-const BlogModel = mongoose.model("blog", schema);
+const BlogModel = mongoose.model("blogpost", schema);
 
 class Blog {
   constructor() {

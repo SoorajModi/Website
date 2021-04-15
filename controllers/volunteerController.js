@@ -2,7 +2,7 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { Volunteer } = source("models/volunteer");
+const { Volunteer } = source("models");
 
 const VolunteerController = {
   get(req, res) {

@@ -1,5 +1,3 @@
 const skill = require("./skill");
 
-module.exports = {
-  Skill: skill.Skill
-};
+module.exports = skill.Skill;

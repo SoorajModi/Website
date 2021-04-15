@@ -2,8 +2,7 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { Education } = source("models/education");
-const { Certification } = source("models/certification");
+const { Education, Certification } = source("models");
 
 const EducationController = {
   get(req, res) {

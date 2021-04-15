@@ -1,5 +1,3 @@
 const admin = require("./admin");
 
-module.exports = {
-  Admin: admin.Admin
-};
+module.exports = admin.Admin;

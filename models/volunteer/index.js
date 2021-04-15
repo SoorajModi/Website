@@ -1,5 +1,3 @@
 const vol = require("./volunteer");
 
-module.exports = {
-  Volunteer: vol.Volunteer
-};
+module.exports = vol.Volunteer;

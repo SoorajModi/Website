@@ -2,7 +2,7 @@ const source = require("rfr");
 const MarkdownIt = require("markdown-it");
 
 const md = new MarkdownIt();
-const { Blog } = source("models/blog");
+const { Blog } = source("models");
 
 const BlogController = {
   get(req, res) {

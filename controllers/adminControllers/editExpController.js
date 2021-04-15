@@ -1,7 +1,7 @@
 const source = require("rfr");
 const _ = require("lodash");
 
-const { Experience } = source("models/experience");
+const { Experience } = source("models");
 
 const EditExpController = {
   get(req, res) {

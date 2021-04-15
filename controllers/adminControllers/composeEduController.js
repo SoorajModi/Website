@@ -1,6 +1,6 @@
 const source = require("rfr");
 
-const { Education } = source("models/education");
+const { Education } = source("models");
 
 const ComposeExpController = {
   get(req, res) {
