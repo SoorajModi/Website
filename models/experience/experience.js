@@ -49,6 +49,12 @@ class Experience {
     return this;
   }
 
+  static update(filter, update) {
+    return ExpModel.findOneAndUpdate(filter, update)
+      .then((res) => console.log(`Successfully edited experience post: ${res}`))
+      .catch((err) => console.log(`Error: could not update experience post: ${err}`));
+  }
+
   save() {
     return this.model.save().then(() => this);
   }

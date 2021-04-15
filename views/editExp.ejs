@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('partials/header'); -%>
+<body>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Edit Post</h1>
+
+            <div class="container" style="padding-top: 0">
+                <form action="/experience/<%= uuid %>/edit" method="post">
+                    <div class="form-group">
+                        <label for="editTitle">Title
+                            <input class="form-control" type="text" name="editTitle" value="<%= title %>">
+                        </label>
+                        <label for="editDate">Date
+                            <input class="form-control" type="text" name="editDate" value="<%= date %>">
+                        </label>
+                        <label for="editDate">Subheading
+                            <input class="form-control" type="text" name="editDate" value="<%= date %>">
+                        </label>
+                        <label for="editBody">Body
+                            <textarea class="form-control" name="editBody" rows="8" cols="80"><%= body %></textarea>
+                        </label>
+                    </div>
+                    <div class="submit-btn">
+                        <button class="btn btn-secondary" type="submit" name="button">Publish Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+<%- include('partials/footer'); -%>
+</html>

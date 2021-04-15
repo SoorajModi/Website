@@ -56,10 +56,10 @@ class Blog {
       }));
   }
 
-  static updatePost(filter, update) {
+  static update(filter, update) {
     return BlogModel.findOneAndUpdate(filter, update)
       .then((res) => console.log(`Successfully edited blog post: ${res}`))
-      .catch((err) => console.log(`Error: could not update blogpost: ${err}`));
+      .catch((err) => console.log(`Error: could not update blog post: ${err}`));
   }
 
   static deletePost(filter) {

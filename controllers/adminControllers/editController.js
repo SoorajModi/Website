@@ -10,7 +10,6 @@ const EditController = {
         Blog.find({ url: req.params.post }) // 0
       ).then((values) => {
         const foundPost = values[0];
-        console.log(foundPost);
         res.render("editPost", {
           url: foundPost.url,
           title: foundPost.title,
@@ -31,7 +30,7 @@ const EditController = {
       const newTitle = _.startCase(req.body.editTitle);
       const newURL = (req.body.editTitle).replace(/\s+/g, "-").toLowerCase();
 
-      Blog.updatePost({ url: req.params.post }, {
+      Blog.update({ url: req.params.post }, {
         title: newTitle,
         description: req.body.editDescription,
         body: req.body.editBody,
