@@ -1,3 +1,4 @@
+const AdminController = require("./adminControllers/adminController");
 const { BlogController, BlogPostController } = require("./blogController");
 const { ContactController } = require("./contactController");
 const { EducationController } = require('./educationController');
@@ -8,6 +9,7 @@ const { ResumeController } = require('./resumeController');
 const { VolunteerController } = require('./volunteerController');
 
 module.exports = {
+  AdminController,
   BlogController,
   BlogPostController,
   ContactController,

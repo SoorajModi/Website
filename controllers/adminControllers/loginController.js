@@ -23,7 +23,7 @@ const LoginController = {
         }
       });
 
-      return res.redirect("/blog");
+      return res.redirect("/admin");
     })(req, res);
   }
 };

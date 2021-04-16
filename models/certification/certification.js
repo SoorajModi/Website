@@ -50,6 +50,15 @@ class Certification {
         return cert;
       }));
   }
+
+  static find(filter) {
+    return CertModel.find(filter)
+      .then((certification) => certification.map((c) => {
+        const cert = new Certification();
+        cert.model = c;
+        return cert;
+      }));
+  }
 }
 
 module.exports = {

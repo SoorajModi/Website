@@ -61,6 +61,15 @@ class Volunteer {
         return vol;
       }));
   }
+
+  static find(filter) {
+    return VolModel.find(filter)
+      .then((volunteer) => volunteer.map((v) => {
+        const vol = new Volunteer();
+        vol.model = v;
+        return vol;
+      }));
+  }
 }
 
 module.exports = {

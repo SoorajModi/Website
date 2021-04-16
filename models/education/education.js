@@ -61,6 +61,15 @@ class Education {
         return edu;
       }));
   }
+
+  static find(filter) {
+    return EduModel.find(filter)
+      .then((education) => education.map((e) => {
+        const edu = new Education();
+        edu.model = e;
+        return edu;
+      }));
+  }
 }
 
 module.exports = {

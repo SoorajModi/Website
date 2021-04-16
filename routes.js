@@ -2,6 +2,7 @@ const express = require("express");
 const source = require("rfr");
 
 const {
+  AdminController,
   BlogController,
   BlogPostController,
   ContactController,
@@ -38,6 +39,8 @@ router.get("/login", LoginController.get);
 router.post("/login", LoginController.post);
 
 router.get("/logout", LogoutController.get);
+
+router.get('/admin', AdminController.get);
 
 router.get("/blog/compose", ComposePostController.get);
 router.post("/blog/compose", ComposePostController.post);

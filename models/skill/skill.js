@@ -35,6 +35,15 @@ class Skill {
         return skill;
       }));
   }
+
+  static find(filter) {
+    return SkillModel.find(filter)
+      .then((skills) => skills.map((s) => {
+        const skill = new Skill();
+        skill.model = s;
+        return skill;
+      }));
+  }
 }
 
 module.exports = {

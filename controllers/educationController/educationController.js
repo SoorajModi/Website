@@ -1,7 +1,5 @@
 const source = require("rfr");
-const MarkdownIt = require("markdown-it");
-
-const md = new MarkdownIt();
+const { renderBody } = source("controllers/utils");
 const { Education, Certification } = source("models");
 
 const EducationController = {
@@ -20,12 +18,5 @@ const EducationController = {
     });
   }
 };
-
-function renderBody(exps) {
-  exps.forEach((exp) => {
-    exp.body = md.render(exp.body);
-  });
-  return exps;
-}
 
 module.exports = EducationController;

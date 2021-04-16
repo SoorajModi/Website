@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('partials/header'); -%>
+<body>
+<div class="container">
+    <%- include('partials/navbar'); -%>
+    <main>
+        <div class="main-header">
+            <h1>Admin</h1>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Experience</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% experiences.forEach((exp) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4><%= exp.title %></h4>
+                            <h6><%= exp.subheading %></h6>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Education</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% education.forEach((edu) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4><%= edu.title %></h4>
+                            <h6><%= edu.subheading %></h6>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Certifications</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% certifications.forEach((cert) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h5><%= cert.title %></h5>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Volunteering</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% volunteer.forEach((vol) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4><%= vol.title %></h4>
+                            <h6><%= vol.subheading %></h6>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Blog</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% blog.forEach((post) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4><%= post.title %></h4>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+
+            <div class="row">
+                <div class="col-11">
+                    <h3>Skills</h3>
+                </div>
+                <div class="col-1">
+                    <a class="btn btn-secondary" href="/admin" role="button">Create</a>
+                </div>
+            </div>
+            <hr>
+            <% skills.forEach((skill) => { %>
+                <div class="container divider cat-header">
+                    <div class="row">
+                        <div class="col-11">
+                            <h4><%= skill.skill %></h4>
+                        </div>
+                        <div class="col-1">
+                            <a class="btn btn-secondary" href="/admin" role="button">Edit</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <% }); %>
+        </div>
+    </main>
+</div>
+</body>
+<%- include('partials/footer'); -%>
+</html>

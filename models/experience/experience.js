@@ -49,14 +49,23 @@ class Experience {
     return this;
   }
 
+  save() {
+    return this.model.save().then(() => this);
+  }
+
   static update(filter, update) {
     return ExpModel.findOneAndUpdate(filter, update)
       .then((res) => console.log(`Successfully edited experience post: ${res}`))
       .catch((err) => console.log(`Error: could not update experience post: ${err}`));
   }
 
-  save() {
-    return this.model.save().then(() => this);
+  static find(filter) {
+    return ExpModel.find(filter)
+      .then((exps) => exps.map((e) => {
+        const exp = new Experience();
+        exp.model = e;
+        return exp;
+      }));
   }
 
   static getAll() {

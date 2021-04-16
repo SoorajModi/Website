@@ -1,7 +1,5 @@
 const source = require("rfr");
-const MarkdownIt = require("markdown-it");
-
-const md = new MarkdownIt();
+const { renderBody } = source("controllers/utils");
 const { Volunteer } = source("models");
 
 const VolunteerController = {
@@ -18,12 +16,5 @@ const VolunteerController = {
     });
   }
 };
-
-function renderBody(exps) {
-  exps.forEach((exp) => {
-    if (exp.body) exp.body = md.render(exp.body);
-  });
-  return exps;
-}
 
 module.exports = VolunteerController;

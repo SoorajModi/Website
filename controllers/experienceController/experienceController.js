@@ -1,7 +1,5 @@
 const source = require("rfr");
-const MarkdownIt = require("markdown-it");
-
-const md = new MarkdownIt();
+const { renderBody } = source('controllers/utils');
 const { Skill, Experience } = source("models");
 
 const ExperienceController = {
@@ -24,13 +22,6 @@ const ExperienceController = {
     });
   }
 };
-
-function renderBody(exps) {
-  exps.forEach((exp) => {
-    exp.body = md.render(exp.body);
-  });
-  return exps;
-}
 
 function splitList(list) {
   const half = Math.ceil(list.length / 2);
