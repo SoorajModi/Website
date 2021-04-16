@@ -1,5 +1,4 @@
 const source = require("rfr");
-const _ = require("lodash");
 
 const { Experience } = source("models");
 
@@ -29,7 +28,7 @@ const EditExpController = {
   post(req, res) {
     if (req.isAuthenticated()) {
       Experience.update({ uuid: req.params.post }, {
-        title: newTitle,
+        title: req.body.editTitle,
         subheading: req.body.editSubheading,
         body: req.body.editBody,
         date: req.body.editDate,
